@@ -58,38 +58,44 @@
             color: hsl(35, 85%, 62%); 
         }
 
+        /* popup css */
         .popup{
             width: 400px;
             background: #fff ;
             border-radius: 8px;
             position: absolute;
-            top: 30%;
-            left:35%;
-            transform: translate(-50%,-50);
+            left: 50%;
+            top: 60;
+            transform: translate(-50%,-50%) scale(0.1);
+            margin-left: auto;
+            margin-right: auto;
             text-align: center;
             padding: 0 30px 30px;
             color: #333;
+            visibility: hidden;
         }
         .popup img{
             width: 100px;
-            margin-top: 0px;
+            margin-top: 8px;
             border-radius: 50%;
-            box-shadow: 0 2px 5px rgba (0,0,0,0.2);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
         .popup h2{
             font-size:38px;
-            font-weight:500;
+            font-weight:600;
             margin: 30px 0 10px;
         }
-
         .popup button{
             width: 100px;
             margin-top: 40px;
             padding: 10px 0;
-            background: #fff;
-            border-radius:
-    
+            border-radius:4px;
+            border: 0;
+            outline:none;
+            font-size:18px;
+            cursor: pointer;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.2)
         }
 
     </style>
@@ -168,7 +174,7 @@
     <div class="popup">
         <img src ="correctmark.png">
         <h2>Thank You</h2>
-        <p>Your details has been successfully submitted. Thanks ! </p>
+        <p>Your details has been successfully submitted.</p>
         <button type="button">OK</button>
     </div>
 
