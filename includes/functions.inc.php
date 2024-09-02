@@ -118,5 +118,4 @@ function loginUser($conn, $username, $pwd){
         exit();
     }
 }
-
 ?>

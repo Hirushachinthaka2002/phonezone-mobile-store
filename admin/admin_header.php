@@ -1,4 +1,6 @@
-
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -516,7 +518,7 @@
     <ul class="n">
         <li style="float:right"><?php 
             if (isset($_SESSION ['useruid'])){
-                echo '<a class="active" href="includes/logout.inc.php">LogOut</a>';
+                echo '<a class="active" href="./admin_logout.php">LogOut</a>';
             }else{
                 echo '<a class="active" href="admin_signup.php">SingUp</a>';
             }

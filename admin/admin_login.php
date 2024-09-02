@@ -138,7 +138,7 @@
     <div class="container">
         <div class="login-container" id="login-container">
             <h2>Login</h2>
-            <form action="includes/login.inc.php" method="post">
+            <form action="./admin_login_handle.php" method="post">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="uid" placeholder="Username or Email" required>
                 <label for="password">Password</label>

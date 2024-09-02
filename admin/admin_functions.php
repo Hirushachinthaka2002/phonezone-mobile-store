@@ -1,19 +1,69 @@
 <?php
-// Owners create and login
+function emptyInputSignup($fullname, $username,$email,  $pwd, $repwd){
+    $result=null;
+    if(empty($fullname) || empty($username) ||  empty($email) || empty($pwd) || empty($repwd)){
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
 
+function invalidUid($username){
+    $result=null;
+    if(!preg_match("/^[a-zA-Z0-9]*$/", $username)){
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+function invalidEmail($email){
+    $result=null;
+    if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+// function invalidCnum($cnum){
+//     $result;
+//     if(!preg_match("/^\d{10}$/", $cnum)){
+//         $result = true;
+//     } else {
+//         $result = false;
+//     }
+//     return $result;
+// }
+
+function pwdMatch($pwd, $repwd){
+    $result=null;
+    if($pwd !== $repwd){
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
+
+
+// Owners create and login
 
 function createOwners($conn, $fullname, $username, $email, $pwd){
     $sql = "INSERT INTO owners (usersName, usersUid, usersEmail,usersPwd) VALUES (?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)){
-        header("Location:../admin/admin_signup.php?error=stmtfailed");
+        header("Location:./admin_signup.php?error=stmtfailed");
         exit();
     }
     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
     mysqli_stmt_bind_param($stmt, "ssss", $fullname, $username, $email, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("Location:../admin/admin_login.php?error=none");
+    header("Location:./admin_login.php?error=none");
     exit();
 }
 
@@ -21,7 +71,7 @@ function ownersExists($conn, $username, $email){
     $sql = "SELECT * FROM owners WHERE usersUid = ? OR usersEmail = ?;";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)){
-        header("Location:../admin/admin_signup.php?error=stmtfailed");
+        header("Location:./admin_signup.php?error=stmtfailed");
         exit();
     }
     mysqli_stmt_bind_param($stmt, "ss", $username, $email);
@@ -37,25 +87,35 @@ function ownersExists($conn, $username, $email){
     mysqli_stmt_close($stmt);
 }
 
+
+function emptyInputLogin($username, $pwd){
+    $result=null;
+    if( empty($username) || empty($pwd)){
+        $result = true;
+    } else {
+        $result = false;
+    }
+    return $result;
+}
 function loginOwners($conn, $username, $pwd){
-    $uidExists = uidExists($conn, $username, $username);
-    if($uidExists === false){
-        header("Location:../admin/admin_signup.php?error=eronglogin");
+    $ownersExists = ownersExists($conn, $username, $username);
+    if($ownersExists === false){
+        header("Location:./admin_signup.php?error=eronglogin");
         exit();
     }
 
-    $pwdHashed = $uidExists['usersPwd'];
+    $pwdHashed = $ownersExists['usersPwd'];
     $checkPwd = password_verify($pwd, $pwdHashed);
 
     if ($checkPwd === false){
-        header("Location:../admin/admin_signup.php?error=wronglogin");
+        header("Location:./admin_signup.php?error=wronglogin");
         exit();
     } else if($checkPwd === true){
         session_start();
-        $_SESSION ['userid'] = $uidExists['usersId'];
-        $_SESSION ['useruid'] = $uidExists['usersUid'];
-        $_SESSION ['userfname'] = $uidExists['usersName'];
-        header("Location:../admin/admin_home.php");
+        $_SESSION ['userid'] = $ownersExists['usersId'];
+        $_SESSION ['useruid'] = $ownersExists['usersUid'];
+        $_SESSION ['userfname'] = $ownersExists['usersName'];
+        header("Location:./admin_user.php");
         exit();
     }
 }

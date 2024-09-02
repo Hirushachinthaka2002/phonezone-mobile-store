@@ -6,15 +6,15 @@ if (isset($_POST["submit"])) {
     $pwd = $_POST["pwd"];
     $repwd = $_POST["repwd"];
 
-    require_once '../includes/detabase.inc.php';
-    require_once '.functions.inc.php';
+    require_once './admin_db.php';
+    require_once './admin_functions.php';
 
     $emptyInput = emptyInputSignup($fullname, $username, $email,  $pwd, $repwd);
     $invalidUid = invalidUid($username);
     $invalidEmail = invalidEmail($email);
     // $invalidCnum = invalidCnum($cnum);
     $pwdMatch = pwdMatch($pwd, $repwd);
-    $uidExists = uidExists($conn, $username, $email);
+    $ownersExists = ownersExists($conn, $username, $email);
 
     if ($emptyInput !== false) {
         header("Location:./admin_signup.php?error=emptyinput");
@@ -36,10 +36,10 @@ if (isset($_POST["submit"])) {
         header("Location:./admin_signup.php?error=passworddontmatch");
         exit();
     }
-    if ($uidExists !== false) {
-        header("Location:./admin_signup.php?error=usernametaken");
-        exit();
-    }
+    // if ($uidExists !== false) {
+    //     header("Location:./admin_signup.php?error=usernametaken");
+    //     exit();
+    // }
 
     createOwners($conn, $fullname, $username,$email, $pwd);
 } else {

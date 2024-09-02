@@ -136,7 +136,7 @@
     <div class="container">
         <div class="login-container" id="login-container">
             <h2>Register</h2>
-            <form action="includes/signup.inc.php" method="post">
+            <form action="./admin_signup_handle.php" method="post">
                 <label for="username">Full Name</label>
                 <input type="text" id="username" name="fname" required>
                 <label for="username">Username</label>
