@@ -7,7 +7,7 @@ if (isset($_POST["submit"])) {
     $repwd = $_POST["repwd"];
 
     require_once '../includes/detabase.inc.php';
-    require_once '../includes/functions.inc.php';
+    require_once '.functions.inc.php';
 
     $emptyInput = emptyInputSignup($fullname, $username, $email,  $pwd, $repwd);
     $invalidUid = invalidUid($username);
