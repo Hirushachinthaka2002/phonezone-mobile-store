@@ -26,7 +26,7 @@
         justify-content: space-between;
         align-items: center;
         /* background-color: #3233; */
-        padding: 11px 20px;
+        padding: 10px 20px;
     }
     .left,.right{
         display:flex;
