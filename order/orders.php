@@ -65,7 +65,7 @@
             border-radius: 8px;
             position: absolute;
             left: 50%;
-            top: 60;
+            top: 0;
             transform: translate(-50%,-50%) scale(0.1);
             margin-left: auto;
             margin-right: auto;
@@ -73,7 +73,14 @@
             padding: 0 30px 30px;
             color: #333;
             visibility: hidden;
+            transition: transform 0.4s, top 0.4s;
         }
+        .open-popup{
+            visibility: visible;
+            top: 50%;
+            transform: translate(-50%,-50%) scale(1);
+        }
+
         .popup img{
             width: 100px;
             margin-top: 8px;
@@ -97,6 +104,7 @@
             cursor: pointer;
             box-shadow: 0 5px 5px rgba(0,0,0,0.2)
         }
+        
 
     </style>
 </head>
@@ -105,7 +113,7 @@
     <a href="../index.php" class="phone"><img src="weblogo.png" alt="phone zone" class="logo1"></a>
   
     <div class="container">
-    <form action="process_order.php" method="post">
+    <form action="process_order.php" method="post" id="formSubmit">
         <label for="username">Full Name</label>
         <input type="text" id="username" name="fname" placeholder="Your Full Nmae" required>
         <label for="username">Country</label>
@@ -167,17 +175,32 @@
         <label for="dining-date">Today Date</label>
         <input type="date" id="username" name="odate" required>
 
-        <button name="submit" type="submit">Send Order</button>
+        <button name="submit" type="submit" onclick="openPopup()">Send Order</button>
     </form>
     </div>
-
-    <div class="popup">
+<!-- 
+    <div class="popup" id="popup">
         <img src ="correctmark.png">
         <h2>Thank You</h2>
         <p>Your details has been successfully submitted.</p>
-        <button type="button">OK</button>
+        <button type="button" onclick="closePopup()">OK</button>
     </div>
 
+<script>
+    
+
+let popup = document.getElementById("popup");
+
+let orderForm = document.getElemendById('formSubmit')
+
+orderForm.addEventListener("submit",()=>{
+    popup.classList.add("open-popup")
+}) 
+
+function closePopup(){
+    popup.classList.remove("open-popup");
+}
+</script> -->
     <script src="orders.js"></script>
 
 </body>

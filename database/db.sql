@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 31, 2024 at 10:38 PM
+-- Generation Time: Sep 02, 2024 at 10:22 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `phonezone_login`
 --
+CREATE DATABASE IF NOT EXISTS `phonezone_login` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `phonezone_login`;
 
 -- --------------------------------------------------------
 
@@ -81,7 +83,28 @@ INSERT INTO `orders` (`ordersId`, `usersName`, `usersCountry`, `usersAddress`, `
 (10, 'dw', 'dw', 'w', '11', 'hirushachinthaka05@gmail.com', 770797556, 'iphone', 'apple-iphone-12-pro-max', 'black', '128', '2024-07-04', 2, 'pending'),
 (11, 'aj', 'ak', 'aj', '22', 'hirushachinthaka445@gmail.com', 770797556, 'iphone', 'apple-iphone-13', 'red', '256', '2024-07-05', 2, 'pending'),
 (12, 'jkka', 'xj', 'as', 'as', 'hirushachinthaka445@gmail.com', 770797556, 'redmi', 'redmi-13c', 'blue', '128', '2024-07-05', 2, 'pending'),
-(13, 'sd', 'ss', 'sds', 'ds', 'hirushachinthaka05@gmail.com', 770797556, 'vivo', 'vivo-y02t', 'white', '128', '2024-07-08', 2, 'pending');
+(13, 'sd', 'ss', 'sds', 'ds', 'hirushachinthaka05@gmail.com', 770797556, 'vivo', 'vivo-y02t', 'white', '128', '2024-07-08', 2, 'pending'),
+(14, 'efjj', 'dsedw', 'wdw', '2232', 'hirushachinthaka445@gmail.com', 770797556, 'cover', 'spigen-samsung-galaxy-z-flip-4-a', 'blue', '128', '2024-09-13', 2, 'pending'),
+(15, 'efjj', 'dsedw', 'wdw', '2232', 'hirushachinthaka445@gmail.com', 770797556, 'powerbank', 'samsung-galaxy-s21', 'blue', '128', '2024-09-01', 2, 'pending'),
+(16, 'efjj', 'dsedw', 'wdw', '2232', 'hirushachinthaka445@gmail.com', 770797556, 'iphone', 'apple-iphone-13-pro', 'blue', '128', '2024-09-01', 2, 'pending'),
+(17, 'dsdwd', 'dsd', 'wddw', '54', 'hirushachinthaka445@gmail.com', 770797556, 'charger', 'ldnio-charger', 'red', '64', '2024-09-01', 2, 'pending'),
+(18, 'dsdwd', 'dsd', 'wddw', '54', 'hirushachinthaka445@gmail.com', 770797556, 'infinix', 'infinix-hot-30-5g', 'white', '64', '2024-09-01', 2, 'pending'),
+(19, 'dfsdfdsf', 'sfddsfssfsd', 'dfsfsdf', '12113', 'vidu@gmail.com', 1111111111, 'airpods', 'airpods-h1-processor', 'black', '128', '2024-09-03', 2, 'pending'),
+(20, 'hiru', 'jdis', 'ffdf', '656', 'hirushachinthaka445@gmail.com', 770797556, 'charger', 'apple-magsafe-charger', 'blue', '128', '2024-09-01', 2, 'pending');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `owners`
+--
+
+CREATE TABLE `owners` (
+  `usersId` int(32) NOT NULL,
+  `usersName` int(128) NOT NULL,
+  `usersUid` varchar(64) NOT NULL,
+  `UsersEmail` varchar(64) NOT NULL,
+  `usersPwd` varchar(256) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Indexes for dumped tables
@@ -100,6 +123,12 @@ ALTER TABLE `orders`
   ADD PRIMARY KEY (`ordersId`);
 
 --
+-- Indexes for table `owners`
+--
+ALTER TABLE `owners`
+  ADD PRIMARY KEY (`usersId`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -113,7 +142,13 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `ordersId` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `ordersId` int(12) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `owners`
+--
+ALTER TABLE `owners`
+  MODIFY `usersId` int(32) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

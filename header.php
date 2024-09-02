@@ -165,7 +165,7 @@
         border-bottom-right-radius:5px;
         border-top-right-radius:5px;
     }
-    .btn:focus{ color
+    .btn:focus{
         outline:none;
     }
     .srch:focus{

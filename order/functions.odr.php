@@ -3,7 +3,7 @@
 
 
 function emptyInputOrder($fullName, $country, $address, $pcode, $email, $cnum, $brand,$phoneType, $colour,$storage,$date) {
-    $result;
+    $result=null;
     if(empty($fullName) || empty($country) || empty($address) || empty($pcode) || empty($email) || empty($cnum) || empty($brand) || empty($phoneType) || empty($colour) || empty($storage) || empty($date)){
         $result = true;
     } else {
@@ -14,7 +14,7 @@ function emptyInputOrder($fullName, $country, $address, $pcode, $email, $cnum, $
 
 
 function invalidEmail($email){
-    $result;
+    $result=null;
     if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
         $result = true;
     } else {
@@ -24,7 +24,7 @@ function invalidEmail($email){
 }
 
 function invalidCnum($cnum){
-    $result;
+    $result=null;
     if(!preg_match("/^\d{10}$/", $cnum)){
         $result = true;
     } else {

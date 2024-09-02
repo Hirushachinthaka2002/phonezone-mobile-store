@@ -1,13 +1,15 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>PhoneZone</title>
     <!-- <link rel="stylesheet" href="stylesheet.css"> -->
     <style>
     body{
-        
-        background-color: black; 
-    /* background-image: url("admin/brandpage.jpg"); */
+    background-image: url("./brandpage.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
@@ -38,14 +40,14 @@
         height:60px;
         width:190px; 
     }
-    ul {
+    ul.n {
     list-style: none;
     margin: 0;
     padding: 0;
     /* background-color: #3233; */
     text-align:center;
     }
-    ul li {
+    ul.n li {
     display: inline-block;
     position: relative;
     }
@@ -65,46 +67,26 @@
     background-color: #3233; 
     }
 
-    /* .right{ 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #3233;
-        padding: 10px 20px;
-        display: inline-block;
-        position: relative;
-        background-color: #3233; 
-        background-color: #111;
-        display: block;
-        color: white;
-        padding: 14px 16px;
-        text-decoration: none;
-        margin: 0;
-        padding: 0;
-        background-color: #3233;
-        text-align:center;
-     } */
-
-    /* nav dropdown */
-    ul li ul.dropdown li {
-    display:block;
-    }
-    .ddul li{
-        width:137px;
-    }
-    ul li ul.dropdown  {
-    /* opacity: 0.9; */
-    background:#333;
-    position: absolute;
-    z-index: 999;
-    display: none;
-    }
-    ul li a:hover{
-    background:hsl(35, 85%, 52%);
-    }
-    ul li:hover ul.dropdown{
-    display:block ;
-    }
+        /* nav dropdown */
+        ul li ul.dropdown li {
+        display:block;
+        }
+        .ddul li{
+            width:137px;
+        }
+        ul li ul.dropdown  {
+        /* opacity: 0.9; */
+        background:#333;
+        position: absolute;
+        z-index: 999;
+        display: none;
+        }
+        ul li a:hover{
+        background:hsl(35, 85%, 52%);
+        }
+        ul li:hover ul.dropdown{
+        display:block ;
+        }
 
 
     /* brand phone image css */
@@ -181,7 +163,7 @@
         border-bottom-right-radius:5px;
         border-top-right-radius:5px;
     }
-    .btn:focus{ color
+    .btn:focus{ 
         outline:none;
     }
     .srch:focus{
@@ -236,6 +218,7 @@
     .hcontent span{
         color:hsl(35, 85%, 52%);
     }
+
 
      /* homepage images css */
     .image-container {
@@ -326,7 +309,44 @@
     }
 
 
+
+     /*User Profile Orders box css */
+     .box-container_order {
+        padding: 10px;
+        margin-bottom: 5px;
+        display: flex;
+        gap: 10px; /* Adjust the gap between boxes as needed */
+    }
+
+    .box_order {
+        opacity: 0.6;
+        margin:center;
+        background-color: white;
+        padding: 30px;
+        border: 1px solid #000;
+        border-radius:10px;
+        font-size: 14px;
+        font-weight: bold;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        width: 530px; /* Adjust the width of the boxes as needed */
+        height: 300px; /* Adjust the height of the boxes as needed */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* margin-items: center; */
+    }
+    .box_order p{
+        color:black;
+    }
     
+    ul.o li {
+    padding:3px;
+    margin-left:40px;
+    list-style-type: square;
+    color:black;
+    }
+    
+
     /* footer css */
     *{
         margin: 0;
@@ -370,7 +390,7 @@
         width: auto;
         text-align: center;
         list-style-type:none;
-        padding: 7px;
+        /* padding: 7px; */
         position: relative;
     }
     .list li::before{
@@ -428,14 +448,30 @@
         margin-left:200px;
 
     }
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    }
+
+    tr:nth-child(even) {
+    background-color: #dddddd;
+    }
     
 </style>
 </head>
 <body>
 <div class="navbar">
     <div class="left">
-        <a href="index.php" class="phone"><img src="weblogo.png" alt="phone zone" class="logo1"></a>
-    <ul>
+        <a href="index.php" class="phone"><img src="./weblogo.png" alt="phone zone" class="logo1"></a>
+    <ul class="n">
         <li>
             <a href="#">Mobile Brand</a>
                 <ul class="dropdown">
@@ -474,6 +510,27 @@
                 <input class ="srch" type="search" name="" placeholder="Type To Brand Name">
                 <a href="#"> <button class="btn">Search</button></a>
         </div>
+    </div>
+
+    <div class="right">
+    <ul class="n">
+        <li style="float:right"><?php 
+            if (isset($_SESSION ['useruid'])){
+                echo '<a class="active" href="includes/logout.inc.php">LogOut</a>';
+            }else{
+                echo '<a class="active" href="admin_signup.php">SingUp</a>';
+            }
+            ?>
+        </li>
+         <li style="float:right"><?php 
+            if (isset($_SESSION ['useruid'])){
+                echo '<a class="active" href="admin_user.php"><i class="fa-solid fa-circle-user"></i> Hi '.$_SESSION ['useruid'].'</a>';
+            }else{
+                echo '<a class="active" href="admin_login.php">Login</a>';
+            }
+            ?>
+       </li>
+    </ul>
     </div>
 </div>
 
