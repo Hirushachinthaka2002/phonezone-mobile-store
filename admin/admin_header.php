@@ -455,16 +455,38 @@
         font-family: arial, sans-serif;
         border-collapse: collapse;
         width: 100%;
+        color: #f18930;
     }
 
     td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
+    border: 1px solid #fff;
+    text-align: center;
     padding: 8px;
+
     }
 
     tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color:hsl(35, 85%, 52%);
+    }
+    .btno {
+        width:100px;
+        height:40px;
+        background:#fff;
+        margin-top:1px;
+        color:#000;
+        font-size:15px;
+        border-radius: 12px;
+        cursor: pointer;
+        box-shadow: 0 1px #fff;
+    }
+    .btno:hover {
+        background-color: hsl(35, 85%, 50%);
+    }
+
+    .btno:active {
+    background-color: red;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
     }
     
 </style>

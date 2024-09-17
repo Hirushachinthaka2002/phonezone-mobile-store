@@ -185,7 +185,7 @@
         border-bottom-right-radius:5px;
         border-top-right-radius:5px;
     }
-    .btn:focus{ color
+    .btn:focus{ 
         outline:none;
     }
     .srch:focus{
@@ -438,7 +438,7 @@
 <body>
 <div class="navbar">
     <div class="left">
-        <a href="../index.php" class="phone"><img src="photo\weblogo.png" alt="phone zone" class="logo1"></a>
+        <a href="../index2.php" class="phone"><img src="photo\weblogo.png" alt="phone zone" class="logo1"></a>
     <ul>
         <li>
             <a href="#">Mobile Brand</a>

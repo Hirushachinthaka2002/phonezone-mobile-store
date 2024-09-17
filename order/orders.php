@@ -1,3 +1,12 @@
+<?php
+
+$phonemodel = '';
+
+ if (isset($_GET['phonemodel'])){
+    $phonemodel= $_GET['phonemodel'];
+ }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -126,8 +135,11 @@
         <input type="text" id="username" name="email" placeholder="Your Email" required>
         <label for="username">Contact Number</label>
         <input type="text" id="username" name="cnum" placeholder="Your Contact Number" required>
+        <label for="username">phone Type</label>
+        <input type="text" id="username"  disabled value="<?php echo $phonemodel ?>" >
+        <input type="text" id="username" name="phoneType" hidden value="<?php echo $phonemodel ?>" >
         
-        <label for="brand">Phone Brand</label>
+        <!-- <label for="brand">Phone Brand</label>
         <select id="brand" name="brand" onchange="updatePhoneTypes()">
             <option value="">Select a brand</option>
             <option value="iphone">iPhone</option>
@@ -148,12 +160,12 @@
             <option value="tempered">Tempered Glass</option>
             <option value="cover">Back Cover</option>
             <option value="headset">Headset</option>
-        </select>
+        </select> -->
 
-        <label for="phoneType">Phone Type</label>
+        <!-- <label for="phoneType">Phone Type</label>
         <select id="phoneType" name="phoneType">
             <option value="">Select a type</option>
-        </select>
+        </select> -->
 
         <label for="colour">Colour</label>
         <select id="colour" name="colour" >

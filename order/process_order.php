@@ -8,7 +8,6 @@ if (isset($_POST["submit"])) {
     $pcode = $_POST["pcode"];
     $email = $_POST["email"];
     $cnum = $_POST["cnum"];
-    $brand = $_POST['brand'];
     $phoneType = $_POST['phoneType'];
     $colour = $_POST['colour'];
     $storage = $_POST['storage'];
@@ -21,7 +20,7 @@ if (isset($_POST["submit"])) {
 
 
 
-    $emptyInput = emptyInputOrder($fullName,$country, $address, $pcode, $email, $cnum,$brand,$phoneType,$colour,$storage,$date);
+    $emptyInput = emptyInputOrder($fullName,$country, $address, $pcode, $email, $cnum,$colour,$storage,$date);
     $invalidEmail = invalidEmail($email);
     $invalidCnum = invalidCnum($cnum);
     // $invalidPcode = invalidPcode($pcode);
@@ -44,7 +43,7 @@ if (isset($_POST["submit"])) {
     //     exit();
     // }
 
-    sendOrder($conn, $fullName, $country, $address, $pcode, $email, $cnum,$brand,$phoneType,$colour,$storage,$date,$userId);
+    sendOrder($conn, $fullName, $country, $address, $pcode, $email, $cnum,$phoneType,$colour,$storage,$date,$userId);
    
 }
 else{

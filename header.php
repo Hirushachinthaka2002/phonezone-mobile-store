@@ -27,6 +27,15 @@
         align-items: center;
         /* background-color: #3233; */
         padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        backdrop-filter: blur(5px);
+    }
+
+    .right{
+        padding-right: 50px;
     }
     .left,.right{
         display:flex;
@@ -175,7 +184,7 @@
 
     /* homepage inedex page css */
     .hcontent{
-        margin-top:60px;
+        margin-top:110px;
         font-family:"Times New Roman";
         font-size:25px;
         padding:20px;
@@ -187,7 +196,6 @@
         padding-left:60px;
         padding-bottom:20px;
         letter-spacing:3px;
-        /* margin-top:9%; */
     }
     .hcontent p{
         font-size:20px;
@@ -198,7 +206,7 @@
         line-height:30px;
     }
     .hcontent .cn{
-        width:140px;
+        width:190px;
         height:40px;
         background:hsl(35, 85%, 52%);
         border:none;
@@ -225,8 +233,8 @@
      /* homepage images css */
     .image-container {
         position: left;
-        width: 50px;  /* Adjust as needed */
-        height: 40px; /* Adjust as needed */
+        width: 50px;
+        height: 40px; 
         overflow: hidden;
         /* padding:700px; */
     }
@@ -271,11 +279,12 @@
 
      /*homepage text box css */
     .box-container {
+        padding-top: 60px;
         margin-bottom: 100px;
         align-items: center;
         justify-content: center;
         display: flex;
-        gap: 20px; /* Adjust the gap between boxes as needed */
+        gap: 20px; 
     }
 
     .box {
@@ -289,8 +298,8 @@
         font-size: 14px;
         font-weight: bold;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        width: 400px; /* Adjust the width of the boxes as needed */
-        height: 250px; /* Adjust the height of the boxes as needed */
+        width: 400px;
+        height: 250px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -301,9 +310,9 @@
     }
 
     .logo {
-        width: 120px; /* Adjust the size of the logo as needed */
+        width: 120px;
         height: auto;
-        margin-bottom: 10px; /* Space between logo and text */
+        margin-bottom: 10px; 
     }
 
     .box-text {
@@ -313,15 +322,23 @@
 
 
      /*User Profile Orders box css */
-     .box-container_order {
-        padding: 10px;
-        margin-bottom: 5px;
-        display: flex;
-        gap: 10px; /* Adjust the gap between boxes as needed */
-    }
 
+     .profile {
+        padding: 100px 100px 20px 30px;
+     }
+     .profile h1,h2{
+        color: #f18930;
+     }
+     .box-container_order {
+        padding: 30px;
+        display: flex;
+    }
+    .orders{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(350px,500px));
+    } 
     .box_order {
-        opacity: 0.6;
+        opacity: 0.9;
         margin:center;
         background-color: white;
         padding: 30px;
@@ -330,15 +347,25 @@
         font-size: 14px;
         font-weight: bold;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        width: 530px; /* Adjust the width of the boxes as needed */
-        height: 300px; /* Adjust the height of the boxes as needed */
+        width: 530px;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        /* margin-items: center; */
     }
     .box_order p{
         color:black;
+    }
+    .order-status{
+        background-color:#f18930;
+        /* border: 2px solid #000; */
+        border-radius:10px;
+        font-size: 14px;
+        width: fit-content;
+
+        h3{
+            padding: 10px;
+            color:#000;
+        }
     }
     
     ul.o li {
@@ -427,6 +454,7 @@
     }
     a:hover{
         color: #fff;
+        border-radius: 20px;
     }
     .social-icons i:hover{
         color: #fff;
@@ -514,13 +542,10 @@
             }else{
                 // echo '<a class="active" href="login.php"></a>';
             }
-            ?>
+          ?>
        </li>
     </ul>
     </div>
 </div>
 
-    
 
-
-    

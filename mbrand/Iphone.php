@@ -10,16 +10,29 @@
     <title>PhoneZone</title>
     <!-- <link rel="stylesheet" href="stylesheet.css"> -->
     <style>
-    body{
+    /* body{
     background-image: url("photo/brandpage.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
-    }
+    display: flex;
+    } */
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-attachment: fixed;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
     /* navigation bar (brad to aboutus) */
     * {
         padding: 0;
         margin: 0; 
+        box-sizing: border-box;
     }
     .navbar{
         display: flex;
@@ -435,12 +448,77 @@
 
     }
     
+
+
+
+
+
+.product-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: 300px;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.features {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.features li {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+.price-range {
+    font-size: 16px;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+.price-range span {
+    font-weight: bold;
+}
+
+.order-btn {
+    display: inline-block;
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #e67e22;
+}
+
+
 </style>
 </head>
 <body>
 <div class="navbar">
     <div class="left">
-        <a href="../index.php" class="phone"><img src="photo\weblogo.png" alt="phone zone" class="logo1"></a>
+        <a href="../index2.php" class="phone"><img src="photo\weblogo.png" alt="phone zone" class="logo1"></a>
     <ul>
         <li>
             <a href="#">Mobile Brand</a>
@@ -508,3 +586,36 @@
 
 
     
+<div class="torder">
+<h2>I Phone Samart Phone</h2>
+<h5>Current Stock</h5>
+<br>
+<p>Choose your favorite smartphone, book your order today and pay on receipt of your phone. Stocks are limited so hurryup.</p><br>
+</div>
+
+    
+
+
+    <div class="product-card">
+        <img src="iphone15.jpg" alt="iPhone 15 Pro Max" class="product-image">
+        <h2>Apple iPhone 15 Pro Max</h2>
+        <ul class="features">
+            <li>4441mAH Battery</li>
+            <li>Apple A17 Pro</li>
+            <li>6.7" Super Retina XDR Display</li>
+            <li>256 GB , 512GB , 1TB</li>
+            <li>8 GB RAM</li>
+            <li>Pro Camera System</li>
+        </ul>
+        <p class="price-range">Price Range: <span>Rs.379,900.00 To Rs.504,900.00</span></p>
+        <a href="#" class="order-btn">ORDER NOW</a>
+    </div>
+
+
+
+<?php 
+    include_once 'b_footer.php';
+?>
+
+
+

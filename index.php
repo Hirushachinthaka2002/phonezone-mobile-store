@@ -11,11 +11,22 @@
     }
     ?></h1>
 
-    <h3>Welcome to our phone zone<br>online mobile phone store</h3><br>
-    <p>Choose your favorite smartphone,<br> book your order today and pay on receipt of your phone.<br> Stocks are limited so hurry.<br>
-       If you want to order,<br> you must be logged in to our website.<br>No need if you are already logged in.</p>
-       <button class="cn"><a href="login.php">Login</a></button>
-    </div>
+    <?php
+        if (isset($_SESSION ['useruid'])){
+            echo '<h3>Welcome to our phone zone<br>online mobile phone store</h3><br>';
+            echo '<p>Choose your favorite smartphone,<br> book your order today and pay on receipt of your phone.<br> Stocks are limited so hurry.<br>
+                    You are already logged in to our website.<br>If you want to order mobile phone or accessories,<br> send us your selection. <br>We will deliver your order to you in confidence.<br> Payment can be made after receiving your order.<br> For more details call <br>our phone numbers and get details.</p>';
+            // echo '<button class="cn">You All Ready Login</button>';
+                
+        }else{
+            echo '<h3>Welcome to our phone zone<br>online mobile phone store</h3><br>';
+            echo '<p>Choose your favorite smartphone,<br> book your order today and pay on receipt of your phone.<br> Stocks are limited so hurry.<br>
+                If you want to order,<br> you must be logged in to our website.<br>No need if you are already logged in.</p>';
+            echo '<button class="cn"><a href="login.php">Customer Login</a></button>';  
+            echo '<button class="cn"><a href="./admin/admin_login.php">Shop Owner Login</a></button>';  
+        }
+    ?>
+</div>
 
     <div class="image-container">
             <img src="photo/offer1.png" class="image image1" alt="Image 1">
