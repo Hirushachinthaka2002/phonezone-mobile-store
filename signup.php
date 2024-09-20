@@ -123,6 +123,16 @@
             width:190px;
             margin: 1%;
        }
+       .error{
+        color: red;
+        border: 3px solid hsl(35, 85%, 62%);
+        border-radius: 20px;
+        font-size: 15px;
+        font-family: Arial, sans-serif;
+        padding: 7px;
+        text-align: center;
+        margin-bottom: 20px;
+       }
     </style>
 </head>
 <body>
@@ -149,6 +159,23 @@
                 <input type="password" id="password" name="repwd" required>
                 <button name="submit" type="submit"><h3>Register<h3></button>
             </form>
+                <?php
+                    if(isset($_GET["error"])){
+                        if($_GET["error"] == "emptyinput"){
+                            echo'<div class ="error">Fill in the all fields</div>';
+                        }elseif($_GET["error"] == "invalidUsername"){
+                            echo'<div class ="error">Invalid Username !<br>Try another one.</div>';
+                        }elseif($_GET["error"] == "invalidEmail"){
+                            echo'<div class ="error">Invalid Email !, Try another one.</div>';
+                        }elseif($_GET["error"] == "passworddontmatch"){
+                            echo'<div class ="error">Do not match password !<br> Re-enter the correct password.</div>';
+                        }elseif($_GET["error"] == "usernametaken"){
+                            echo'<div class ="error">Username of Email allready used !<br>Try another one.</div>';
+                        }
+                    }
+                ?>
+          
+
             <p>If you already have an account  <a href= "login.php">  Click Login</a></p>
         </div>
     </body>
