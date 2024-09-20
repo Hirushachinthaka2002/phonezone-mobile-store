@@ -15,7 +15,7 @@
                     <li class="f"><a href="#">Accessories</a></li>
                     <li class="f"><a href="contact.php">Contact Details</a></li>
                     <li class="f"><a href="services.php">Services</a></li>
-                    <li class="f"><a href="about.php">About</a></li>
+                    <li class="f"><a href="about.php">About Us</a></li>
                  </ul>
             </div> -->
             <div class="footer-content">
