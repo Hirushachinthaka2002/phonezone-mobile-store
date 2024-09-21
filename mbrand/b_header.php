@@ -439,8 +439,8 @@
 
 
 .card-main{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,500px));
+    display: flex;
+    flex-direction: column;
     padding: 10px;
     /* float: left; */
 }
