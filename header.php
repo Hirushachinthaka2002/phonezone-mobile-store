@@ -55,7 +55,7 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    /* background-color: #3233; */
+    background-color: #000;
     text-align:center;
     }
     ul.n li {
@@ -490,7 +490,7 @@
             <a href="#">Mobile Brand</a>
                 <ul class="dropdown">
                 <div class="ddul">
-                    <li><a href="mbrand/b_iphone.php">Iphone</a></li>
+                    <!-- <li><a href="mbrand/b_iphone.php">Iphone</a></li>
                     <li><a href="mbrand/b_samsung.php">Samsung</a></li>
                     <li><a href="mbrand/b_pixel.php">Google Pixel</a></li>
                     <li><a href="mbrand/b_huawei.php">Huawei</a></li>
@@ -501,7 +501,19 @@
                     <li><a href="mbrand/b_sony.php">Sony</a></li>
                     <li><a href="mbrand/b_honor.php">Honor</a></li>
                     <li><a href="mbrand/b_tecno.php">Tecno</a></li>
-                    <li><a href="mbrand/b_infinix.php">Infinix</a></li>
+                    <li><a href="mbrand/b_infinix.php">Infinix</a></li> -->
+                    <li><a href="mbrand/phone.php?brand=Iphone">Iphone</a></li>
+                    <li><a href="mbrand/phone.php?brand=Samsung">Samsung</a></li>
+                    <li><a href="mbrand/phone.php?brand=GooglePixel">Google Pixel</a></li>
+                    <li><a href="mbrand/phone.php?brand=Huawei">Huawei</a></li>
+                    <li><a href="mbrand/phone.php?brand=Redmi">Redmi</a></li>
+                    <li><a href="mbrand/phone.php?brand=Realme">Realme</a></li>
+                    <li><a href="mbrand/phone.php?brand=Oppo">Oppo</a></li>
+                    <li><a href="mbrand/phone.php?brand=Vivo">Vivo</a></li>
+                    <li><a href="mbrand/phone.php?brand=Sony">Sony</a></li>
+                    <li><a href="mbrand/phone.php?brand=Honor">Honor</a></li>
+                    <li><a href="mbrand/phone.php?brand=Tecno">Tecno</a></li>
+                    <li><a href="mbrand/phone.php?brand=Infinix">Infinix</a></li>
                 </div>
                 </ul>
         </li>

@@ -10,7 +10,7 @@
 </div>
     
 <a href="#"><div class="phone" data-model="phoneModel">
-<img src="photo/Infinix/Infinix_GT_10_Pro.png" alt="Infinix_GT_10_Pro" class="table-image">
+<img src="/photo/Infinix/Infinix_GT_10_Pro.png" alt="Infinix_GT_10_Pro" class="table-image">
 <img src="photo/Infinix/Infinix_GT_20_Pro.png" alt="Infinix_GT_20_Pro" class="table-image">
 <img src="photo/Infinix/Infinix_Hot_30_5G.png" alt="Infinix_Hot_30_5G" class="table-image">            
 <img src="photo/Infinix/Infinix_Note_40_5G.png" alt="Infinix_Note_40_5G" class="table-image">      

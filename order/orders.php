@@ -136,8 +136,8 @@ $phonemodel = '';
         <label for="username">Contact Number</label>
         <input type="text" id="username" name="cnum" placeholder="Your Contact Number" required>
         <label for="username">phone Type</label>
-        <input type="text" id="username"  disabled value="<?php echo $phonemodel ?>" >
-        <input type="text" id="username" name="phoneType" hidden value="<?php echo $phonemodel ?>" >
+        <input type="text" id="username"  disabled value="<?php echo $phone ?>" >
+        <input type="text" id="username" name="phoneType" hidden value="<?php echo $phone ?>" >
         
         <!-- <label for="brand">Phone Brand</label>
         <select id="brand" name="brand" onchange="updatePhoneTypes()">

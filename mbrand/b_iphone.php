@@ -57,3 +57,16 @@
 
 
 
+<div class="product-card">
+        <img src="<?php echo htmlspecialchars($image_url); ?>" alt="<?php echo htmlspecialchars($model); ?>" class="product-image">
+        <h2><?php echo htmlspecialchars($model); ?></h2>
+        <ul class="features">
+            <li><?php echo htmlspecialchars($display); ?></li>
+            <li><?php echo htmlspecialchars($camera); ?></li>
+            <li><?php echo htmlspecialchars($battery); ?></li>
+            <li><?php echo htmlspecialchars($storage); ?></li>
+            <li><?php echo htmlspecialchars($ram); ?></li>
+        </ul>
+        <p class="price-range">Price Range: <span><?php echo htmlspecialchars($price_range); ?></span></p>
+        <a href="#" class="order-btn">ORDER NOW</a>
+    </div>

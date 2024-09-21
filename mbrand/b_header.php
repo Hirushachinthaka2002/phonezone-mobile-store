@@ -25,7 +25,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* background-color: #3233; */
+        background-color: #000;
         padding: 10px 20px;
     }
     .left,.right{
@@ -435,6 +435,81 @@
 
     }
     
+
+
+
+.card-main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,500px));
+    padding: 10px;
+    /* float: left; */
+}
+.product-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: 300px;
+    padding: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: grid;
+
+}
+
+.product-image {
+    width: 60%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.features {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.features li {
+    margin-bottom: 10px;
+    list-style: circle;
+    font-size: 15px;
+    color: #000;
+}
+
+.price-range {
+    font-size: 16px;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+.price-range span {
+    font-weight: bold;
+    color: #e67e22;
+}
+
+.order-btn {
+    display: inline-block;
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    align-items: center;
+}
+
+.order-btn:hover {
+    background-color: #e67e22;
+}
+
+
+
 </style>
 </head>
 <body>
@@ -446,7 +521,7 @@
             <a href="#">Mobile Brand</a>
                 <ul class="dropdown">
                 <div class="ddul">
-                <li><a href="../mbrand/b_iphone.php">Iphone</a></li>
+                    <!-- <li><a href="../mbrand/phone.php?brand=iphone">Iphone</a></li>
                     <li><a href="../mbrand/b_samsung.php">Samsung</a></li>
                     <li><a href="../mbrand/b_pixel.php">Google Pixel</a></li>
                     <li><a href="../mbrand/b_huawei.php">Huawei</a></li>
@@ -457,7 +532,19 @@
                     <li><a href="../mbrand/b_sony.php">Sony</a></li>
                     <li><a href="../mbrand/b_honor.php">Honor</a></li>
                     <li><a href="../mbrand/b_tecno.php">Tecno</a></li>
-                    <li><a href="../mbrand/b_infinix.php">Infinix</a></li>
+                    <li><a href="../mbrand/b_infinix.php">Infinix</a></li> -->
+                    <li><a href="../mbrand/phone.php?brand=Iphone">Iphone</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Samsung">Samsung</a></li>
+                    <li><a href="../mbrand/phone.php?brand=GooglePixel">Google Pixel</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Huawei">Huawei</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Redmi">Redmi</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Realme">Realme</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Oppo">Oppo</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Vivo">Vivo</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Sony">Sony</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Honor">Honor</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Tecno">Tecno</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Infinix">Infinix</a></li>
                 </div>
                 </ul>
         </li>
