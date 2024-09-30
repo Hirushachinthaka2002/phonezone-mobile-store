@@ -1,7 +1,7 @@
 <?php
 $serverName = "localhost";
-$dbUsername = "hiru2002";
-$dbPassword = "!bofx-umkaeVH!gt";
+$dbUsername = "root";
+$dbPassword = "";
 $dbName = "phonezone_login";
 
 $conn = mysqli_connect($serverName, $dbUsername, $dbPassword, $dbName);
