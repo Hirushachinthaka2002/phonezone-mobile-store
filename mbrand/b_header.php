@@ -433,6 +433,84 @@
 
     }
     
+<<<<<<< Updated upstream
+=======
+
+
+
+.card-main{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,450px));
+    gap: 1rem;
+    justify-content: center;
+}
+.product-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    width: 300px;
+    padding: 30px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: grid;
+
+}
+
+.product-image {
+    width: 60%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.features {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.features li {
+    margin-bottom: 10px;
+    list-style: circle;
+    font-size: 15px;
+    color: #000;
+}
+
+.price-range {
+    font-size: 16px;
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+.price-range span {
+    font-weight: bold;
+    color: #e67e22;
+}
+
+.order-btn {
+    display: inline-block;
+    background-color: #f39c12;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    align-items: center;
+}
+
+.order-btn:hover {
+    background-color: #e67e22;
+}
+
+
+
+>>>>>>> Stashed changes
 </style>
 </head>
 <body>

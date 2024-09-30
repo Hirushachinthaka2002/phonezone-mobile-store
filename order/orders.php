@@ -126,6 +126,12 @@
         <input type="text" id="username" name="email" placeholder="Your Email" required>
         <label for="username">Contact Number</label>
         <input type="text" id="username" name="cnum" placeholder="Your Contact Number" required>
+<<<<<<< Updated upstream
+=======
+        <label for="username">phone Type</label>
+        <input type="text" id="username"  disabled value="<?php echo $phonemodel ?>" >
+        <input type="text" id="username" name="phoneType" hidden value="<?php echo $phonemodel ?>" >
+>>>>>>> Stashed changes
         
         <label for="brand">Phone Brand</label>
         <select id="brand" name="brand" onchange="updatePhoneTypes()">
