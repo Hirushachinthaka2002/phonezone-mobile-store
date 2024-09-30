@@ -148,11 +148,11 @@
             <h2>Register</h2>
             <form action="includes/signup.inc.php" method="post">
                 <label for="username">Full Name</label>
-                <input type="text" id="username" name="fname" required>
+                <input type="text" id="fullname" name="fname" required>
                 <label for="username">Username</label>
                 <input type="text" id="username" name="uid" required>
                 <label for="username">Email Address</label>
-                <input type="text" id="username" name="email" required>
+                <input type="text" id="email" name="email" required>
                 <label for="password">Password</label>
                 <input type="password" id="password" name="pwd" required>
                 <label for="password">Re-Password</label>

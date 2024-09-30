@@ -27,6 +27,8 @@ if (isset($_GET['brand'])) {
         <p>Choose your favorite smartphone, book your order today and pay on receipt of your phone. Stocks are limited so hurryup.</p><br>
     </div>
 
+
+    <div class="card-main">
     <?php
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
@@ -41,7 +43,7 @@ if (isset($_GET['brand'])) {
     ?>
 
 
-        <div class="card-main">
+        
         <div class="product-card">
             <img src="<?php echo htmlspecialchars($image_url); ?>" alt="<?php echo htmlspecialchars($model); ?>" class="product-image">
             <h2><?php echo htmlspecialchars($model); ?></h2>
@@ -55,9 +57,20 @@ if (isset($_GET['brand'])) {
             <p class="price-range">Price Range: <span><?php echo htmlspecialchars($price_range); ?></span></p>
             <!-- "Order Now" button -->
             <a href="javascript:void(0);" class="order-btn" onclick="orderNow('<?php echo htmlspecialchars($model); ?>')">ORDER NOW</a>
+
+        <script>
+            function orderNow(model) {
+                <?php if (isset($_SESSION['useruid'])): ?>
+                    window.location.href = `../order/orders.php?phonemodel=${encodeURIComponent(model)}`;
+                <?php else: ?>
+                    window.location.href = '../login.php';
+                <?php endif; ?>
+            }
+        </script>
+
         </div>
-        </div>
-        </div>
+        
+
     <?php
             }
         } else {
@@ -69,17 +82,9 @@ if (isset($_GET['brand'])) {
 
     $conn->close();
     ?>
-        
+</div>      
      
-        <script>
-            function orderNow(model) {
-                <?php if (isset($_SESSION['useruid'])): ?>
-                    window.location.href = `../order/orders.php?phone=${encodeURIComponent(model)}`;
-                <?php else: ?>
-                    window.location.href = '../login.php';
-                <?php endif; ?>
-            }
-        </script>
+        
 
 
 <?php 
