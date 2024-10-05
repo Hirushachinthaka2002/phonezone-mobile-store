@@ -320,6 +320,36 @@
     }
 
 
+    /* contact page css */
+    .box-center{
+        padding-top: 200px;
+        margin-bottom: 200px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    .contact{
+        padding: 100px;
+        opacity: 0.7;
+        margin:center;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #000;
+        border-radius:10px;
+        text-align: center;
+        font-size: 29px;
+        font-weight: bold;
+        font-size: 14px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        width: 400px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
 
      /*User Profile Orders box css */
 
@@ -478,6 +508,80 @@
         margin-left:200px;
 
     }
+
+    .card-main{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(350px,450px));
+        padding: 10px;
+        gap: 1rem;
+        justify-content: center;
+        /* float: left; */
+    }
+    .product-card {
+        background-color: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
+        width: 300px;
+        padding: 30px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: grid;
+
+    }
+
+    .product-image {
+        margin-left: 59px;
+        width: 180px;
+        height: 180px;
+        border-radius: 10px;
+        margin-bottom: 19px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .features {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .features li {
+        margin-bottom: 10px;
+        list-style: circle;
+        font-size: 15px;
+        color: #000;
+    }
+
+    .price-range {
+        font-size: 16px;
+        color: #e67e22;
+        margin-bottom: 15px;
+    }
+
+    .price-range span {
+        font-weight: bold;
+        color: #e67e22;
+    }
+
+    .order-btn {
+        display: inline-block;
+        background-color: #f39c12;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        align-items: center;
+    }
+
+    .order-btn:hover {
+        background-color: #e67e22;
+    }
     
 </style>
 </head>
@@ -490,18 +594,6 @@
             <a href="#">Mobile Brand</a>
                 <ul class="dropdown">
                 <div class="ddul">
-                    <!-- <li><a href="mbrand/b_iphone.php">Iphone</a></li>
-                    <li><a href="mbrand/b_samsung.php">Samsung</a></li>
-                    <li><a href="mbrand/b_pixel.php">Google Pixel</a></li>
-                    <li><a href="mbrand/b_huawei.php">Huawei</a></li>
-                    <li><a href="mbrand/b_redmi.php">Redmi</a></li>
-                    <li><a href="mbrand/b_realme.php">Realme</a></li>
-                    <li><a href="mbrand/b_oppo.php">Oppo</a></li>
-                    <li><a href="mbrand/b_vivo.php">Vivo</a></li>
-                    <li><a href="mbrand/b_sony.php">Sony</a></li>
-                    <li><a href="mbrand/b_honor.php">Honor</a></li>
-                    <li><a href="mbrand/b_tecno.php">Tecno</a></li>
-                    <li><a href="mbrand/b_infinix.php">Infinix</a></li> -->
                     <li><a href="mbrand/phone.php?brand=Iphone">Iphone</a></li>
                     <li><a href="mbrand/phone.php?brand=Samsung">Samsung</a></li>
                     <li><a href="mbrand/phone.php?brand=GooglePixel">Google Pixel</a></li>
@@ -520,12 +612,12 @@
         <li>
             <a href="#" class="other">Accessories</a>
                 <ul class="dropdown">
-                    <li><a href="items/a_tempered.php">Tempered Glass</a></li>
-                    <li><a href="items/a_backcover.php">Back Cover</a></li>
-                    <li><a href="items/a_airpods.php">Airpods</a></li>
-                    <li><a href="items/a_charger.php">Charger</a></li>
-                    <li><a href="items/a_headset.php">Headset</a></li>
-                    <li><a href="items/a_powerbank.php">Power bank</a></li>
+                    <li><a href="items/accessories.php?accesName=TemperedGlass">Tempered Glass</a></li>
+                    <li><a href="items/accessories.php?accesName=BackCover">Back Cover</a></li>
+                    <li><a href="items/accessories.php?accesName=Airpods">Airpods</a></li>
+                    <li><a href="items/accessories.php?accesName=Charger">Charger</a></li>
+                    <li><a href="items/accessories.php?accesName=Headset">Headset</a></li>
+                    <li><a href="items/accessories.php?accesName=PowerBank">Power Bank</a></li>
                 </ul>
         </li>
         <li><a href="n_contact.php">Contact Details</a></li>
@@ -533,8 +625,10 @@
         <li><a href="n_about.php">About Us</a></li>
     </ul>
         <div class="search">
-                <input class ="srch" type="search" name="" placeholder="Type To Brand Name">
-                <a href="#"> <button class="btn">Search</button></a>
+        <form action="search.php" method="GET">
+                <input class ="srch" type="search" name="search-value" placeholder="Type To Brand Name">
+                <a href="#"> <button class="btn" type='search' name="search">Search</button></a>
+        </form>
         </div>
     </div>
 

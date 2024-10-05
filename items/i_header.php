@@ -444,18 +444,18 @@
             <a href="#">Mobile Brand</a>
                 <ul class="dropdown">
                 <div class="ddul">
-                    <li><a href="../mbrand/b_iphone.php">Iphone</a></li>
-                    <li><a href="../mbrand/b_samsung.php">Samsung</a></li>
-                    <li><a href="../mbrand/b_pixel.php">Google Pixel</a></li>
-                    <li><a href="../mbrand/b_huawei.php">Huawei</a></li>
-                    <li><a href="../mbrand/b_redmi.php">Redmi</a></li>
-                    <li><a href="../mbrand/b_realme.php">Realme</a></li>
-                    <li><a href="../mbrand/b_oppo.php">Oppo</a></li>
-                    <li><a href="../mbrand/b_vivo.php">Vivo</a></li>
-                    <li><a href="../mbrand/b_sony.php">Sony</a></li>
-                    <li><a href="../mbrand/b_honor.php">Honor</a></li>
-                    <li><a href="../mbrand/b_tecno.php">Tecno</a></li>
-                    <li><a href="../mbrand/b_infinix.php">Infinix</a></li>
+                    <li><a href="../mbrand/phone.php">Iphone</a></li>
+                    <li><a href="../mbrand/bphone.php">Samsung</a></li>
+                    <li><a href="../mbrandphone.php">Google Pixel</a></li>
+                    <li><a href="../mbrand/phone.php">Huawei</a></li>
+                    <li><a href="../mbrandphone.php">Redmi</a></li>
+                    <li><a href="../mbrand/phone.php">Realme</a></li>
+                    <li><a href="../mbranphone.php">Oppo</a></li>
+                    <li><a href="../mbranphone.php">Vivo</a></li>
+                    <li><a href="../mbranphone.php">Sony</a></li>
+                    <li><a href="../mbrandphone.php">Honor</a></li>
+                    <li><a href="../mbrandphone.php">Tecno</a></li>
+                    <li><a href="../mbrand/bphone.php">Infinix</a></li>
                 </div>
                 </ul>
         </li>
@@ -475,8 +475,10 @@
         <li><a href="../n_about.php">About Us</a></li>
     </ul>
         <div class="search">
+        <form action="search.php" method="GET">
                 <input class ="srch" type="search" name="" placeholder="Type To Brand Name">
                 <a href="#"> <button class="btn">Search</button></a>
+        </form>
         </div>
     </div>
 

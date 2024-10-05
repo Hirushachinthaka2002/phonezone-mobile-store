@@ -125,8 +125,10 @@
     }
 
     .product-image {
-        margin-left: 63px;
-        width: 50%;
+        margin-left: 59px;
+        width: 180px;
+        height: 180px;
+        object-fit: contain;
         border-radius: 10px;
         margin-bottom: 19px;
     }
@@ -385,12 +387,12 @@
         <li>
             <a href="#" class="other">Accessories</a>
                 <ul class="dropdown">
-                    <li><a href="../items/a_tempered.php">Tempered Glass</a></li>
-                    <li><a href="../items/a_backcover.php">Back Cover</a></li>
-                    <li><a href="../items/a_airpods.php">Airpods</a></li>
-                    <li><a href="../items/a_charger.php">Charger</a></li>
-                    <li><a href="../items/a_headset.php">Headset</a></li>
-                    <li><a href="../items/a_powerbank.php">Power bank</a></li>
+                    <li><a href="../items/accessories.php">Tempered Glass</a></li>
+                    <li><a href="../items/accessories.php">Back Cover</a></li>
+                    <li><a href="../items/accessories.php">Airpods</a></li>
+                    <li><a href="../items/accessories.php">Charger</a></li>
+                    <li><a href="../items/accessories.php">Headset</a></li>
+                    <li><a href="../items/accessories.php">Power bank</a></li>
                 </ul>
         </li>
         <li><a href="n_contact.php">Contact Details</a></li>
@@ -398,8 +400,10 @@
         <li><a href="n_about.php">About Us</a></li>
     </ul>
         <div class="search">
+        <form action="search.php" method="GET">
                 <input class ="srch" type="search" name="" placeholder="Type To Brand Name">
                 <a href="#"> <button class="btn">Search</button></a>
+        </form>
         </div>
     </div>
 
