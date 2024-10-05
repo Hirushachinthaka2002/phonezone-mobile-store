@@ -41,10 +41,10 @@ if (isset($_GET['accesName'])) {
 
         
         <div class="product-card">
-            <img src="<?php echo htmlspecialchars($image_url); ?>" alt="<?php echo htmlspecialchars($access); ?>" class="product-image">
             <h2><?php echo htmlspecialchars($access); ?></h2>
+            <img src="<?php echo htmlspecialchars($image_url); ?>" alt="<?php echo htmlspecialchars($access); ?>" class="product-image">
             <ul class="features">
-                <li>description Size: <?php echo htmlspecialchars($description); ?></li>
+                <li> <?php echo htmlspecialchars($description); ?></li>
             </ul>
             <p class="price-range">Price:<?php echo htmlspecialchars($price); ?></span></p>
             <!-- "Order Now" button -->

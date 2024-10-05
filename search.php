@@ -48,7 +48,27 @@ if (isset($_GET['search'])) {
     if (mysqli_num_rows($resultAcessories) > 0) {
         while ($row = mysqli_fetch_assoc($resultAcessories)) {
             echo $row['accesId'];
+            $htmlItems .= ' <div class="product-card">
+            <img src="./items' . htmlspecialchars($row['accesPhoto']) . '" alt="' . htmlspecialchars($row['accesName']) . '" class="product-image">
+            <h2>' . htmlspecialchars($row['accesName']) . '</h2>
+            <ul class="features">
+                <li>' . htmlspecialchars($row['accesDescription']) . '</li>
+            </ul>
+            <p class="price-range">Price :' . htmlspecialchars($row['accesPrice']) . '</p>
+            <!-- "Order Now" button -->
+            <a href="javascript:void(0);" class="order-btn" onclick="orderNow(\'' . htmlspecialchars($row['accesDescription']) .'\')">ORDER NOW</a>
+
+        </div>';
         }
+
+        $htmlItems .= '<script>
+                    function orderNow(model) {
+                        ' . (isset($_SESSION['useruid']) ?
+                            'window.location.href = "./order/orders.php?phonemodel=" + encodeURIComponent(model);' :
+                            'window.location.href = "./login.php";') . '
+                                }
+                    </script>';
+        
     }
 }
 

@@ -125,34 +125,92 @@
         width: 500px;  
     }
 
-    /* phone page css */
+    /* Access page css */
     .torder{
-        /* font-size:10px; */
+        font-size:20px;
         padding:20px;
         color:#fff;
     }
     .torder h2,h5{
+        font-size: 30px;
         padding-top:10px;
         padding-right:40px;
         color:hsl(35, 85%, 52%);
     }
-    /* items css ass..  */
-    .item-image { 
-        padding:50px;
+    .card-main{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(350px,450px));
+        padding: 10px;
+        gap: 1rem;
+        justify-content: center;
+        /* float: left; */
+    }
+    .product-card {
+        background-color: white;
+        border: 1px solid #e0e0e0;
+        border-radius: 10px;
         width: 300px;
-        border-radius: 8px;
-        height: auto;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 30px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        display: grid;
+
+    }
+
+    .product-image {
+        margin-left: 59px;
+        width: 180px;
+        height: 180px;
+        object-fit: contain;
+        border-radius: 10px;
+        margin-bottom: 19px;
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+
+    .features {
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .features li {
         margin-bottom: 10px;
-        margin-left: 50px;
-        margin-right: 50px;
-
-    }
-    .item-image:hover {  
-        width: 310px;  
+        list-style: circle;
+        font-size: 15px;
+        color: #000;
     }
 
+    .price-range {
+        font-size: 16px;
+        color: #e67e22;
+        margin-bottom: 15px;
+    }
 
+    .price-range span {
+        font-weight: bold;
+        color: #e67e22;
+    }
+
+    .order-btn {
+        display: inline-block;
+        background-color: #f39c12;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        align-items: center;
+    }
+
+    .order-btn:hover {
+        background-color: #e67e22;
+    }
 
      /* search bar */
      .search{
