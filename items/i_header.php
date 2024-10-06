@@ -25,8 +25,16 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* background-color: #3233; */
+        background-color: #000;
         padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        backdrop-filter: blur(5px);
+    }
+    .right{
+        padding-right: 50px;
     }
     .left,.right{
         display:flex;
@@ -496,36 +504,36 @@
 <body>
 <div class="navbar">
     <div class="left">
-        <a href="../index2.php" class="phone"><img src="photo\weblogo.png" alt="phone zone" class="logo1"></a>
+        <a href="../index.php" class="phone"><img src="photo\weblogo.png" alt="phone zone" class="logo1"></a>
     <ul>
         <li>
             <a href="#">Mobile Brand</a>
                 <ul class="dropdown">
                 <div class="ddul">
-                    <li><a href="../mbrand/phone.php">Iphone</a></li>
-                    <li><a href="../mbrand/bphone.php">Samsung</a></li>
-                    <li><a href="../mbrandphone.php">Google Pixel</a></li>
-                    <li><a href="../mbrand/phone.php">Huawei</a></li>
-                    <li><a href="../mbrandphone.php">Redmi</a></li>
-                    <li><a href="../mbrand/phone.php">Realme</a></li>
-                    <li><a href="../mbranphone.php">Oppo</a></li>
-                    <li><a href="../mbranphone.php">Vivo</a></li>
-                    <li><a href="../mbranphone.php">Sony</a></li>
-                    <li><a href="../mbrandphone.php">Honor</a></li>
-                    <li><a href="../mbrandphone.php">Tecno</a></li>
-                    <li><a href="../mbrand/bphone.php">Infinix</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Iphone">Iphone</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Samsung">Samsung</a></li>
+                    <li><a href="../mbrand/phone.php?brand=GooglePixel">Google Pixel</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Huawei">Huawei</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Redmi">Redmi</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Realme">Realme</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Oppo">Oppo</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Vivo">Vivo</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Sony">Sony</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Honor">Honor</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Tecno">Tecno</a></li>
+                    <li><a href="../mbrand/phone.php?brand=Infinix">Infinix</a></li>
                 </div>
                 </ul>
         </li>
         <li>
             <a href="#" class="other">Accessories</a>
                 <ul class="dropdown">
-                <li><a href="../items/a_tempered.php">Tempered Glass</a></li>
-                    <li><a href="../items/a_backcover.php">Back Cover</a></li>
-                    <li><a href="../items/a_airpods.php">Airpods</a></li>
-                    <li><a href="../items/a_charger.php">Charger</a></li>
-                    <li><a href="../items/a_headset.php">Headset</a></li>
-                    <li><a href="../items/a_powerbank.php">Power bank</a></li>
+                    <li><a href="accessories.php?accesName=Tempered Glass">Tempered Glass</a></li>
+                    <li><a href="accessories.php?accesName=BackCover">Back Cover</a></li>
+                    <li><a href="accessories.php?accesName=Airpods">Airpods</a></li>
+                    <li><a href="accessories.php?accesName=Charger">Charger</a></li>
+                    <li><a href="accessories.php?accesName=Headset">Headset</a></li>
+                    <li><a href="accessories.php?accesName=PowerBank">Power Bank</a></li>
                 </ul>
         </li>
         <li><a href="../n_contact.php">Contact Details</a></li>
@@ -533,9 +541,9 @@
         <li><a href="../n_about.php">About Us</a></li>
     </ul>
         <div class="search">
-        <form action="search.php" method="GET">
-                <input class ="srch" type="search" name="" placeholder="Type To Brand Name">
-                <a href="#"> <button class="btn">Search</button></a>
+        <form action="../search.php" method="GET">
+                <input class ="srch" type="search" name="search-value" placeholder="Type To Brand Name" required>
+                <a href="#"> <button class="btn" type='search' name="search">Search</button></a>
         </form>
         </div>
     </div>

@@ -122,6 +122,7 @@ $phonemodel = '';
     <a href="../index.php" class="phone"><img src="weblogo.png" alt="phone zone" class="logo1"></a>
   
     <div class="container">
+
     <form action="process_order.php" method="post" id="formSubmit">
         <label for="username">Full Name</label>
         <input type="text" id="username" name="fname" placeholder="Your Full Nmae" required>
@@ -135,38 +136,11 @@ $phonemodel = '';
         <input type="text" id="username" name="email" placeholder="Your Email" required>
         <label for="username">Contact Number</label>
         <input type="text" id="username" name="cnum" placeholder="Your Contact Number" required>
-        <label for="username">phone Type</label>
+        <label for="username">Order Item</label>
         <input type="text" id="username"  disabled value="<?php echo $phonemodel ?>" >
         <input type="text" id="username" name="phoneType"  hidden value="<?php echo $phonemodel ?>" >
         
-        <!-- <label for="brand">Phone Brand</label>
-        <select id="brand" name="brand" onchange="updatePhoneTypes()">
-            <option value="">Select a brand</option>
-            <option value="iphone">iPhone</option>
-            <option value="redmi">Redmi</option>
-            <option value="samsung">Samsung</option>
-            <option value="pixel">Google Pixel</option>
-            <option value="huawei">Huawei</option>
-            <option value="realme">Realme</option>
-            <option value="oppo">Oppo</option>
-            <option value="sony">Sony</option>
-            <option value="honor">Honor</option>
-            <option value="vivo">Vivo</option>
-            <option value="tecno">Tecno</option>
-            <option value="infinix">Infinix</option>
-            <option value="airpods">Airpods</option>
-            <option value="charger">Charger</option>
-            <option value="powerbank">Powerbank</option>
-            <option value="tempered">Tempered Glass</option>
-            <option value="cover">Back Cover</option>
-            <option value="headset">Headset</option>
-        </select> -->
-
-        <!-- <label for="phoneType">Phone Type</label>
-        <select id="phoneType" name="phoneType">
-            <option value="">Select a type</option>
-        </select> -->
-
+        <?php if(!isset($_GET['type'])){  ?>
         <label for="colour">Colour</label>
         <select id="colour" name="colour" >
             <option value="">Select a Colour</option>
@@ -183,6 +157,7 @@ $phonemodel = '';
             <option value="128">128 GB</option>
             <option value="256">256 GB</option>
          </select>
+        <?php  } ?>
 
         <label for="dining-date">Today Date</label>
         <input type="date" id="username" name="odate" required>

@@ -47,13 +47,13 @@ if (isset($_GET['accesName'])) {
                 <li> <?php echo htmlspecialchars($description); ?></li>
             </ul>
             <p class="price-range">Price:<?php echo htmlspecialchars($price); ?></span></p>
-            <!-- "Order Now" button -->
-            <a href="javascript:void(0);" class="order-btn" onclick="orderNow('<?php echo htmlspecialchars($access); ?>')">ORDER NOW</a>
+    
+            <a href="javascript:void(0);" class="order-btn" onclick="orderNow('<?php echo htmlspecialchars($description); ?>')">ORDER NOW</a>
 
         <script>
-            function orderNow($access) {
+            function orderNow(description) {
                 <?php if (isset($_SESSION['useruid'])): ?>
-                    window.location.href = `../order/orders.php?accessitem=${encodeURIComponent($access)}`;
+                    window.location.href = `../order/orders.php?type=accessories&phonemodel=${encodeURIComponent(description)}`;
                 <?php else: ?>
                     window.location.href = '../login.php';
                 <?php endif; ?>

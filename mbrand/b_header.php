@@ -27,6 +27,14 @@
         align-items: center;
         background-color: #000;
         padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        backdrop-filter: blur(5px);
+    }
+    .right{
+        padding-right: 50px;
     }
     .left,.right{
         display:flex;
@@ -178,22 +186,6 @@
     .order-btn:hover {
         background-color: #e67e22;
     }
-    /* items css ass..  */
-    .item-image { 
-        padding:50px;
-        width: 300px;
-        border-radius: 8px;
-        height: auto;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        margin-bottom: 10px;
-        margin-left: 50px;
-        margin-right: 50px;
-
-    }
-    .item-image:hover {  
-        width: 310px;  
-    }
-
 
 
      /* search bar */
@@ -357,18 +349,6 @@
             <a href="#">Mobile Brand</a>
                 <ul class="dropdown">
                 <div class="ddul">
-                    <!-- <li><a href="../mbrand/phone.php?brand=iphone">Iphone</a></li>
-                    <li><a href="../mbrand/b_samsung.php">Samsung</a></li>
-                    <li><a href="../mbrand/b_pixel.php">Google Pixel</a></li>
-                    <li><a href="../mbrand/b_huawei.php">Huawei</a></li>
-                    <li><a href="../mbrand/b_redmi.php">Redmi</a></li>
-                    <li><a href="../mbrand/b_realme.php">Realme</a></li>
-                    <li><a href="../mbrand/b_oppo.php">Oppo</a></li>
-                    <li><a href="../mbrand/b_vivo.php">Vivo</a></li>
-                    <li><a href="../mbrand/b_sony.php">Sony</a></li>
-                    <li><a href="../mbrand/b_honor.php">Honor</a></li>
-                    <li><a href="../mbrand/b_tecno.php">Tecno</a></li>
-                    <li><a href="../mbrand/b_infinix.php">Infinix</a></li> -->
                     <li><a href="../mbrand/phone.php?brand=Iphone">Iphone</a></li>
                     <li><a href="../mbrand/phone.php?brand=Samsung">Samsung</a></li>
                     <li><a href="../mbrand/phone.php?brand=GooglePixel">Google Pixel</a></li>
@@ -387,12 +367,12 @@
         <li>
             <a href="#" class="other">Accessories</a>
                 <ul class="dropdown">
-                    <li><a href="../items/accessories.php">Tempered Glass</a></li>
-                    <li><a href="../items/accessories.php">Back Cover</a></li>
-                    <li><a href="../items/accessories.php">Airpods</a></li>
-                    <li><a href="../items/accessories.php">Charger</a></li>
-                    <li><a href="../items/accessories.php">Headset</a></li>
-                    <li><a href="../items/accessories.php">Power bank</a></li>
+                    <li><a href="../items/accessories.php?accesName=Tempered Glass">Tempered Glass</a></li>
+                    <li><a href="../items/accessories.php?accesName=BackCover">Back Cover</a></li>
+                    <li><a href="../items/accessories.php?accesName=Airpods">Airpods</a></li>
+                    <li><a href="../items/accessories.php?accesName=Charger">Charger</a></li>
+                    <li><a href="../items/accessories.php?accesName=Headset">Headset</a></li>
+                    <li><a href="../items/accessories.php?accesName=PowerBank">Power Bank</a></li>
                 </ul>
         </li>
         <li><a href="n_contact.php">Contact Details</a></li>
@@ -400,9 +380,9 @@
         <li><a href="n_about.php">About Us</a></li>
     </ul>
         <div class="search">
-        <form action="search.php" method="GET">
-                <input class ="srch" type="search" name="" placeholder="Type To Brand Name">
-                <a href="#"> <button class="btn">Search</button></a>
+        <form action="../search.php" method="GET">
+                <input class ="srch" type="search" name="search-value" placeholder="Type To Brand Name" required>
+                <a href="#"> <button class="btn" type='search' name="search">Search</button></a>
         </form>
         </div>
     </div>

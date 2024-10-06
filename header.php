@@ -25,7 +25,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        /* background-color: #3233; */
+        background-color: #000;
         padding: 10px 20px;
         position: fixed;
         top: 0;
@@ -322,7 +322,7 @@
 
     /* contact page css */
     .box-center{
-        padding-top: 200px;
+        padding-top: 130px;
         margin-bottom: 200px;
         align-items: center;
         justify-content: center;
@@ -330,7 +330,7 @@
     }
     .contact{
         padding: 100px;
-        opacity: 0.7;
+        /* opacity: 0.7; */
         margin:center;
         background-color: #fff;
         padding: 20px;
@@ -341,13 +341,13 @@
         font-weight: bold;
         font-size: 14px;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        width: 400px;
-        height: 250px;
+        width: 1500px;
+        height: 500px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
     }
 
 
@@ -515,6 +515,7 @@
         padding: 10px;
         gap: 1rem;
         justify-content: center;
+        margin-top: 70px;
         /* float: left; */
     }
     .product-card {
@@ -533,6 +534,7 @@
         margin-left: 59px;
         width: 180px;
         height: 180px;
+        object-fit: contain;
         border-radius: 10px;
         margin-bottom: 19px;
     }
@@ -612,7 +614,7 @@
         <li>
             <a href="#" class="other">Accessories</a>
                 <ul class="dropdown">
-                    <li><a href="items/accessories.php?accesName=TemperedGlass">Tempered Glass</a></li>
+                    <li><a href="items/accessories.php?accesName=Tempered Glass">Tempered Glass</a></li>
                     <li><a href="items/accessories.php?accesName=BackCover">Back Cover</a></li>
                     <li><a href="items/accessories.php?accesName=Airpods">Airpods</a></li>
                     <li><a href="items/accessories.php?accesName=Charger">Charger</a></li>
@@ -626,7 +628,7 @@
     </ul>
         <div class="search">
         <form action="search.php" method="GET">
-                <input class ="srch" type="search" name="search-value" placeholder="Type To Brand Name">
+                <input class ="srch" type="search" name="search-value" placeholder="Type To Brand Name" required>
                 <a href="#"> <button class="btn" type='search' name="search">Search</button></a>
         </form>
         </div>

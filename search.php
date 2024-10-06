@@ -64,7 +64,7 @@ if (isset($_GET['search'])) {
         $htmlItems .= '<script>
                     function orderNow(model) {
                         ' . (isset($_SESSION['useruid']) ?
-                            'window.location.href = "./order/orders.php?phonemodel=" + encodeURIComponent(model);' :
+                            'window.location.href = "./order/orders.php?type=accessories&phonemodel=" + encodeURIComponent(model);' :
                             'window.location.href = "./login.php";') . '
                                 }
                     </script>';

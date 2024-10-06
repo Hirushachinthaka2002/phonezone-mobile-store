@@ -5,7 +5,7 @@
                 <h6>Contact Us</h6>
                 <p>Email: phonezone123@gmail.com</p>
                 <p>Phone: +94 77 079 7556</p>
-                <p>Address: 123 main street,colombo 4</p>
+                <p>Address:<br>W2HM+FGG,Polonnaruwa</p>
             </div>
             <!-- <div class="footer-content">
                 <h6>Quick Links</h6>
