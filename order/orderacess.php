@@ -21,7 +21,7 @@ $phonemodel = '';
   
     <div class="container">
 
-    <form action="process_order.php" method="post" id="formSubmit">
+    <form action="process_orderacess.php" method="post" id="formSubmit">
         <label for="username">Full Name</label>
         <input type="text" id="username" name="fname" placeholder="Your Full Nmae" required>
         <label for="username">Country</label>
@@ -37,24 +37,7 @@ $phonemodel = '';
         <label for="username">Order Item</label>
         <input type="text" id="username"  disabled value="<?php echo $phonemodel ?>" >
         <input type="text" id="username" name="phoneType"  hidden value="<?php echo $phonemodel ?>" >
-        
-        <label for="colour">Colour</label>
-        <select id="colour" name="colour" >
-            <option value="">Select a Colour</option>
-            <option value="black">Black</option>
-            <option value="red">Red</option>
-            <option value="blue">Blue</option>
-            <option value="white">White</option>
-         </select>
-
-         <label for="storage">Storage</label>
-        <select id="storage" name="storage">
-            <option value="">Select a Storage</option>
-            <option value="64">64 GB</option>
-            <option value="128">128 GB</option>
-            <option value="256">256 GB</option>
-         </select>
-
+    
 
         <label for="dining-date">Today Date</label>
         <input type="date" id="username" name="odate" required>

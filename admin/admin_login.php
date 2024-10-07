@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiru Mobile Shop</title>
+    <title>phoneZone</title>
     <style>
             * {
                 padding: 0;
@@ -129,11 +129,8 @@
 </head>
 <body>
     <div class="home1">
-        <a href="admin_home.php" class="phone"><img src="weblogo.png" alt="phone zone" class="logo1"></a>
-    </ul>
-        <!-- <li style="float:right"><a class="active" href="admin_signup.php">SignUp</a></li> -->
-    </ul><br><br><br>
-    </div>
+        <a href="#" class="phone"><img src="weblogo.png" alt="phone zone" class="logo1"></a>
+    
 
     <div class="container">
         <div class="login-container" id="login-container">
@@ -145,7 +142,6 @@
                 <input type="password" id="password" name="pwd" placeholder=password required>
                 <button name="submit" type="submit"><h3>Login</h3></button>
             </form>
-            <p>If you don't already have an account <a href= "admin_signup.php">Click Register</a></p>
         </div>
     </body>
     </html>

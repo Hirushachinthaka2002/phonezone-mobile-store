@@ -23,25 +23,8 @@ function invalidEmail($email){
     return $result;
 }
 
-function invalidCnum($cnum){
-    $result=null;
-    if(!preg_match("/^\d{10}$/", $cnum)){
-        $result = true;
-    } else {
-        $result = false;
-    }
-    return $result;
-}
 
-// function invalidPcode($pcode){
-//     $result;
-//     if(!preg_match("/^\d{10}$/", $pcode)){
-//         $result = true;
-//     } else {
-//         $result = false;
-//     }
-//     return $result;
-// }
+
 
 
 function sendOrder($conn, $fullName, $country, $address, $pcode, $email, $cnum,$phoneType,$colour,$storage,$date,$userId){

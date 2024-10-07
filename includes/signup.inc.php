@@ -12,7 +12,6 @@ if (isset($_POST["submit"])) {
     $emptyInput = emptyInputSignup($fullname, $username, $email,  $pwd, $repwd);
     $invalidUid = invalidUid($username);
     $invalidEmail = invalidEmail($email);
-    // $invalidCnum = invalidCnum($cnum);
     $pwdMatch = pwdMatch($pwd, $repwd);
     $uidExists = uidExists($conn, $username, $email);
 
@@ -28,10 +27,6 @@ if (isset($_POST["submit"])) {
         header("Location:../signup.php?error=invalidEmail");
         exit();
     }
-    // if ($invalidCnum !== false) {
-    //     header("Location:../signup.php?error=invalidContactNum");
-    //     exit();
-    // }
     if ($pwdMatch !== false) {
         header("Location:../signup.php?error=passworddontmatch");
         exit();

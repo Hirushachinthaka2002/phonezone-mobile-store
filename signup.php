@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Hiru Mobile Shop</title>
+    <title>PhoneZone</title>
     <style>
             * {
                 padding: 0;

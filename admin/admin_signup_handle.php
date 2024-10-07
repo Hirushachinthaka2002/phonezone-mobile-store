@@ -12,7 +12,6 @@ if (isset($_POST["submit"])) {
     $emptyInput = emptyInputSignup($fullname, $username, $email,  $pwd, $repwd);
     $invalidUid = invalidUid($username);
     $invalidEmail = invalidEmail($email);
-    // $invalidCnum = invalidCnum($cnum);
     $pwdMatch = pwdMatch($pwd, $repwd);
     $ownersExists = ownersExists($conn, $username, $email);
 
@@ -28,18 +27,10 @@ if (isset($_POST["submit"])) {
         header("Location:./admin_signup.php?error=invalidEmail");
         exit();
     }
-    // if ($invalidCnum !== false) {
-    //     header("Location:../signup.php?error=invalidContactNum");
-    //     exit();
-    // }
     if ($pwdMatch !== false) {
         header("Location:./admin_signup.php?error=passworddontmatch");
         exit();
     }
-    // if ($uidExists !== false) {
-    //     header("Location:./admin_signup.php?error=usernametaken");
-    //     exit();
-    // }
 
     createOwners($conn, $fullname, $username,$email, $pwd);
 } else {

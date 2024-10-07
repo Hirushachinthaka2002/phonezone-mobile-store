@@ -9,33 +9,31 @@ if (isset($_POST["submit"])) {
     $email = $_POST["email"];
     $cnum = $_POST["cnum"];
     $phoneType = $_POST['phoneType'];
-    $colour = $_POST['colour'];
-    $storage = $_POST['storage'];
     $date = $_POST['odate'];
     $userId = $_SESSION ['userid'];
     
 
     require_once '../includes/detabase.inc.php';
-    require_once './functions.odr.php';
+    require_once './functions.orderacess.php';
 
 
 
-    $emptyInput = emptyInputOrder($fullName,$country, $address, $pcode, $email, $cnum,$colour,$storage,$date);
+    $emptyInput = emptyInputOrder($fullName,$country, $address, $pcode, $email, $cnum,$date);
     $invalidEmail = invalidEmail($email);
 
     
 
     if ($emptyInput !== false) {
-        header("Location:orders.php?error=emptyinput&phonemodel=$phoneType");
+        header("Location:orderacess.php?error=emptyinput&phonemodel=$phoneType");
         exit();
     }
     if ($invalidEmail !== false) {
-        header("Location:orders.php?error=invalidEmail&phonemodel=$phoneType");
+        header("Location:orderacess.php?invalidEmail&phonemodel=$phoneType");
         exit();
     }
 
   
-    sendOrder($conn, $fullName, $country, $address, $pcode, $email, $cnum,$phoneType,$colour,$storage,$date,$userId);
+    sendOrder($conn, $fullName, $country, $address, $pcode, $email, $cnum,$phoneType,$date,$userId);
    
 }
     else{

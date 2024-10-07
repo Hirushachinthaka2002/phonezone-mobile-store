@@ -22,9 +22,6 @@ require_once 'includes/functions.inc.php';
 
 
 
-
-// session_start();
-
 if (!isset($_SESSION['userid'])) {
     header("Location: login.php");
     exit;
@@ -37,14 +34,13 @@ $stmt->bind_param("i", $userId);
 $stmt->execute();
 $result = $stmt->get_result();
 
-// Fetch all rows into an array
+
 $orders = [];
 while ($row = $result->fetch_assoc()) {
     $orders[] = $row;
 }
 $stmt->close();
 
-// Reverse the order of the rows
 $orders = array_reverse($orders);
 ?>
 
@@ -84,6 +80,7 @@ $orders = array_reverse($orders);
 <?php else: ?>
     <p>No orders found.</p>
 <?php endif; ?>
+</div>
 </div>
 
 

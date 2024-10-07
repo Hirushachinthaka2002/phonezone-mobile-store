@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Hiru Mobile Shop</title>
+    <title>PhoneZone</title>
     <style>
             * {
                 padding: 0;
@@ -127,10 +127,7 @@
 </head>
 <body>
     <div class="home1">
-        <a href="admin_home.php" class="phone"><img src="weblogo.png" alt="phone zone" class="logo1"></a>
-    </ul>
-        <li style="float:right"><a class="active" href="./admin_login.php">Login</a></li>
-    </ul><br>
+        <a href="admin_user.php" class="phone"><img src="weblogo.png" alt="phone zone" class="logo1"></a>
     </div>
 
     <div class="container">
@@ -149,7 +146,6 @@
                 <input type="password" id="password" name="repwd" required>
                 <button name="submit" type="submit"><h3>Register<h3></button>
             </form>
-            <p>If you already have an account  <a href= "./admin_login.php">  Click Login</a></p>
         </div>
     </body>
     </html>

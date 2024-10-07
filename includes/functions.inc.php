@@ -29,15 +29,6 @@ function invalidEmail($email){
     return $result;
 }
 
-// function invalidCnum($cnum){
-//     $result;
-//     if(!preg_match("/^\d{10}$/", $cnum)){
-//         $result = true;
-//     } else {
-//         $result = false;
-//     }
-//     return $result;
-// }
 
 function pwdMatch($pwd, $repwd){
     $result=null;
@@ -114,6 +105,7 @@ function loginUser($conn, $username, $pwd){
         $_SESSION ['userid'] = $uidExists['usersId'];
         $_SESSION ['useruid'] = $uidExists['usersUid'];
         $_SESSION ['userfname'] = $uidExists['usersName'];
+        $_SESSION ['useremail'] = $uidExists['usersEmail'];
         header("Location:../index.php");
         exit();
     }

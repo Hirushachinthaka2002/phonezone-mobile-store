@@ -5,18 +5,7 @@
                 <h6>Contact Us</h6>
                 <p>Email: phonezone123@gmail.com</p>
                 <p>Phone: +94 77 079 7556</p>
-                <p>Address: W2HM+FGG, Polonnaruwa</p>
-            </div>
-            <div class="footer-content">
-                <h6>Quick Links</h6>
-                 <ul class="list">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="#">Mobile Brand</a></li>
-                    <li><a href="#">Accessories</a></li>
-                    <li><a href="contact.php">Contact Details</a></li>
-                    <li><a href="services.php">Services</a></li>
-                    <li><a href="about.php">About Us</a></li>
-                 </ul>
+                <p>Address:<br>W2HM+FGG, Polonnaruwa</p>
             </div>
             <div class="footer-content">
                 <h6>Follow Us</h6>

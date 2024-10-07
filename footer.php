@@ -7,17 +7,7 @@
                 <p>Phone: +94 77 079 7556</p>
                 <p>Address:<br>W2HM+FGG,Polonnaruwa</p>
             </div>
-            <!-- <div class="footer-content">
-                <h6>Quick Links</h6>
-                 <ul class="list">
-                    <li class="f"><a href="index.php">Home</a></li>
-                    <li class="f"><a href="#">Mobile Brand</a></li>
-                    <li class="f"><a href="#">Accessories</a></li>
-                    <li class="f"><a href="contact.php">Contact Details</a></li>
-                    <li class="f"><a href="services.php">Services</a></li>
-                    <li class="f"><a href="about.php">About Us</a></li>
-                 </ul>
-            </div> -->
+            
             <div class="footer-content">
                 <h6>Follow Us</h6>
                 <ul class="social-icons">

@@ -29,15 +29,6 @@ function invalidEmail($email){
     return $result;
 }
 
-// function invalidCnum($cnum){
-//     $result;
-//     if(!preg_match("/^\d{10}$/", $cnum)){
-//         $result = true;
-//     } else {
-//         $result = false;
-//     }
-//     return $result;
-// }
 
 function pwdMatch($pwd, $repwd){
     $result=null;
@@ -63,7 +54,7 @@ function createOwners($conn, $fullname, $username, $email, $pwd){
     mysqli_stmt_bind_param($stmt, "ssss", $fullname, $username, $email, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("Location:./admin_login.php?error=none");
+    header("Location:./admin_user.php?error=none");
     exit();
 }
 
@@ -100,7 +91,7 @@ function emptyInputLogin($username, $pwd){
 function loginOwners($conn, $username, $pwd){
     $ownersExists = ownersExists($conn, $username, $username);
     if($ownersExists === false){
-        header("Location:./admin_signup.php?error=eronglogin");
+        header("Location:./admin_login.php?error=eronglogin");
         exit();
     }
 
@@ -108,7 +99,7 @@ function loginOwners($conn, $username, $pwd){
     $checkPwd = password_verify($pwd, $pwdHashed);
 
     if ($checkPwd === false){
-        header("Location:./admin_signup.php?error=wronglogin");
+        header("Location:./admin_login.php?error=wronglogin");
         exit();
     } else if($checkPwd === true){
         session_start();

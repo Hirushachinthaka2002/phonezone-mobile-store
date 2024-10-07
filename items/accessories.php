@@ -3,9 +3,7 @@
 ?>
 
 
-
 <?php
-
 
 require_once './access_db.php';
 
@@ -53,7 +51,7 @@ if (isset($_GET['accesName'])) {
         <script>
             function orderNow(description) {
                 <?php if (isset($_SESSION['useruid'])): ?>
-                    window.location.href = `../order/orders.php?type=accessories&phonemodel=${encodeURIComponent(description)}`;
+                    window.location.href = `../order/orderacess.php?type=accessories&phonemodel=${encodeURIComponent(description)}`;
                 <?php else: ?>
                     window.location.href = '../login.php';
                 <?php endif; ?>

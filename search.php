@@ -30,7 +30,7 @@ if (isset($_GET['search'])) {
                                 </ul>
                                 <p class="price-range">Price Range: <span>' . htmlspecialchars($row['priceRange']) . '</span></p>
                                 <!-- "Order Now" button -->
-                                <a href="javascript:void(0);" class="order-btn" onclick="orderNow(\'' . htmlspecialchars($row['itemsName']) .'\')">ORDER NOW</a>
+                                <a href="javascript:void(0);" class="order-btn" onclick="orderNow(\'' . htmlspecialchars($row['itemsName']) . '\')">ORDER NOW</a>
 
                             </div>';
         }
@@ -39,9 +39,9 @@ if (isset($_GET['search'])) {
         <script>
                         function orderNow(model) {
                             ' . (isset($_SESSION['useruid']) ?
-            'window.location.href = "./order/orders.php?phonemodel=" + encodeURIComponent(model);' :
-            'window.location.href = "./login.php";') . '
-                        }
+                            'window.location.href = "./order/orders.php?phonemodel=" + encodeURIComponent(model);' :
+                            'window.location.href = "./login.php";') . '
+                                        }
                         </script>';
     }
 
@@ -56,19 +56,18 @@ if (isset($_GET['search'])) {
             </ul>
             <p class="price-range">Price :' . htmlspecialchars($row['accesPrice']) . '</p>
             <!-- "Order Now" button -->
-            <a href="javascript:void(0);" class="order-btn" onclick="orderNow(\'' . htmlspecialchars($row['accesDescription']) .'\')">ORDER NOW</a>
+            <a href="javascript:void(0);" class="order-btn" onclick="orderNowAccess(\'' . htmlspecialchars($row['accesDescription']) . '\')">ORDER NOW</a>
 
         </div>';
         }
 
         $htmlItems .= '<script>
-                    function orderNow(model) {
+                    function orderNowAccess(model) {
                         ' . (isset($_SESSION['useruid']) ?
-                            'window.location.href = "./order/orders.php?type=accessories&phonemodel=" + encodeURIComponent(model);' :
+                            'window.location.href = "./order/orderacess.php?type=accessories&phonemodel=" + encodeURIComponent(model);' :
                             'window.location.href = "./login.php";') . '
                                 }
                     </script>';
-        
     }
 }
 

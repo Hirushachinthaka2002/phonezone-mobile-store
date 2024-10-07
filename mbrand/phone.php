@@ -2,10 +2,7 @@
     include_once 'b_header.php';
 ?>
 
-
-
 <?php
-
 
 require_once './brand_db.php';
 
@@ -55,6 +52,7 @@ if (isset($_GET['brand'])) {
                 <li>RAM: <?php echo htmlspecialchars($ram); ?></li>
             </ul>
             <p class="price-range">Price Range: <span><?php echo htmlspecialchars($price_range); ?></span></p>
+
             <!-- "Order Now" button -->
             <a href="javascript:void(0);" class="order-btn" onclick="orderNow('<?php echo htmlspecialchars($model); ?>')">ORDER NOW</a>
 
