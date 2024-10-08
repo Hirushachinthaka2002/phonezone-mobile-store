@@ -6,6 +6,10 @@
         require_once 'detabase.inc.php';
         require_once 'functions.inc.php';
 
+
+        $emptyInput = emptyInputLogin($username, $pwd);
+
+
         if (emptyInputLogin($username, $pwd) !== false ){
             exit();
         }

@@ -124,6 +124,16 @@
             width:190px;
             margin: 1%;
        }
+       .error{
+        color: red;
+        border: 3px solid hsl(35, 85%, 62%);
+        border-radius: 20px;
+        font-size: 15px;
+        font-family: Arial, sans-serif;
+        padding: 7px;
+        text-align: center;
+        margin-bottom: 20px;
+       }
 
     </style>
 </head>
@@ -145,6 +155,17 @@
                 <input type="password" id="password" name="pwd" placeholder=password required>
                 <button name="submit" type="submit"><h3>Login</h3></button>
             </form>
+
+            <?php
+                    if(isset($_GET["error"])){
+                        if($_GET["error"] == "wrongloginname"){
+                            echo'<div class ="error">Invalid Username or Email<br>If you don\'t have an account<br>Please create one.</div>';
+                        }elseif($_GET["error"] == "wrongloginpassword"){
+                            echo'<div class ="error">Invalid Password !<br>Try correct one.<br>If you don\'t have an account<br>Please create one.</div>';
+                        }
+                    }
+                ?>
+
             <p>If you don't already have an account <a href= "signup.php">Click Register</a></p>
         </div>
     </body>

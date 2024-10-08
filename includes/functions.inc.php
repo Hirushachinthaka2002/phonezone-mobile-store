@@ -90,7 +90,7 @@ function emptyInputLogin($username, $pwd){
 function loginUser($conn, $username, $pwd){
     $uidExists = uidExists($conn, $username, $username);
     if($uidExists === false){
-        header("Location:../signup.php?error=eronglogin");
+        header("Location:../login.php?error=wrongloginname");
         exit();
     }
 
@@ -98,7 +98,7 @@ function loginUser($conn, $username, $pwd){
     $checkPwd = password_verify($pwd, $pwdHashed);
 
     if ($checkPwd === false){
-        header("Location:../signup.php?error=wronglogin");
+        header("Location:../login.php?error=wrongloginpassword");
         exit();
     } else if($checkPwd === true){
         session_start();
