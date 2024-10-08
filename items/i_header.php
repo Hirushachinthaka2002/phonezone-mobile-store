@@ -268,7 +268,6 @@
         width: auto;
         text-align: center;
         list-style-type:none;
-        padding: 7px;
         position: relative;
     }
     .list li::before{
@@ -303,6 +302,7 @@
     }
     a:hover{
         color: #fff;
+        border-radius: 20px;
     }
     .social-icons i:hover{
         color: #fff;
@@ -310,8 +310,8 @@
     .bottom-bar{
         background: #f18930;
         text-align: center;
-        padding: 10px 0;
-        margin-top: 50px;
+        padding: 0px 0;
+        margin-top: 0px;
     }
     .bottom-bar p{
         color: #343434;
@@ -321,9 +321,9 @@
     }
     .blogo{
         padding:0px;
-        width: 1150px; 
+        width: 900px; 
         height: auto;
-        margin-left:200px;
+        margin-left:23%;
     }
     
 </style>
@@ -388,7 +388,7 @@
         </li>
          <li style="float:right"><?php 
             if (isset($_SESSION ['useruid'])){
-                echo '<a class="active" href="n_userprofile.php"><i class="fa-solid fa-circle-user"></i> Hi '.$_SESSION ['useruid'].'</a>';
+                echo '<a class="active" href="../n_userprofile.php"><i class="fa-solid fa-circle-user"></i> Hi '.$_SESSION ['useruid'].'</a>';
             }else{
             }
             ?>

@@ -453,8 +453,8 @@
     .bottom-bar{
         background: #f18930;
         text-align: center;
-        padding: 10px 0;
-        margin-top: 50px;
+        padding: 0px 0;
+        margin-top: 0px;
     }
     .bottom-bar p{
         color: #343434;
@@ -464,10 +464,9 @@
     }
     .blogo{
         padding:0px;
-        width: 1150px; 
+        width: 900px; 
         height: auto;
-        margin-left:200px;
-
+        margin-left:23%;
     }
 
 

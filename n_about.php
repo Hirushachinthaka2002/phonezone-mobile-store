@@ -22,7 +22,7 @@ include_once 'header.php';
 </div>
 
 <div class="team-details">
-    <h2>OUR TEAM</h2>
+    <h2>Shop Stakeholders & Our Team</h2>
     <div class="image-con">
     <div class="image-details">
         <img src="./photo/hirusha.jpg" class="photo-member">
@@ -86,9 +86,17 @@ include_once 'header.php';
     </div>
     </div>
 </div>
+
     <div class="admin-btn">
-        <button class="ad-btn"><a href="./admin/admin_login.php">Shop Owner Login</a></button>
+        <?php
+            if (isset($_SESSION ['useruid'])){
+                echo  '';
+            }else{
+                echo  '<button class="ad-btn"><a href="./admin/admin_login.php">Shop Owner Login</a></button>';
+            }
+        ?>
     </div>
+
 <?php
 include_once 'footer.php';
 ?>
