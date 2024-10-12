@@ -14,6 +14,7 @@
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: 100% 100%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
             }
         
         .home1{
@@ -134,6 +135,13 @@
         text-align: center;
         margin-bottom: 20px;
        }
+       .sf{
+        text-align: center;
+        margin-top: 12px;
+       }
+       .sf p{
+        margin-top: 10px;
+       }
 
     </style>
 </head>
@@ -165,8 +173,10 @@
                         }
                     }
                 ?>
-
-            <p>If you don't already have an account <a href= "signup.php">Click Register</a></p>
+            <div class="sf">
+                <p><a href= "./Forget_password/forget_reset/forgot-password.php">Forogt Password</a></p>
+                <p>If you don't already have an account <a href= "signup.php">Click Register</a></p>
+            </div>
         </div>
     </body>
     </html>

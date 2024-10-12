@@ -183,6 +183,8 @@
     }
     .cn:hover{
         background-color:#fff;
+        width: 200px;
+        height: 45px;
     }
     .hcontent span{
         color:hsl(35, 85%, 52%);
@@ -646,10 +648,11 @@
         border-radius: 17px;
         margin-top: 50px;
         background-color: #e0e0e0;
-        width: 220px;
-        height:410px;
+        width: 210px;
+        height:350px;
         text-align: center;
         box-shadow: 0 5px 5px rgba(254,222,0,0.43);
+        opacity: 80%;
     }
     .image-details h4{
         margin-top: 20px;
@@ -662,8 +665,9 @@
     }
     .icon-in{
         display: flex;
+        align-items: center;
         justify-content: center;
-        margin-right: 10px;
+        margin-right: 14px;
     }
     .icon-in i{
         margin-top: 20px;
@@ -678,9 +682,11 @@
     .photo-member{
         border-radius: 17px;
         margin-top: 35px;
-        width: 180px;
+        width: 140px;
         height: auto;
         box-shadow: 0 8px 8px rgba(0,0,0,0.2);
+        border-radius: 10%;
+
     }
     .admin-btn{
         justify-content: center;

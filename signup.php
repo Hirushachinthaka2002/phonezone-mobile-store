@@ -12,6 +12,7 @@
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-size: 100% 100%;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
             }
         
         .home1{

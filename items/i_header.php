@@ -72,7 +72,8 @@
         text-decoration: none;
     }
     li a:hover:not(.active) {
-        background-color: hsl(35, 85%, 52%); 
+        background-color: hsl(35, 85%, 52%);
+        border-radius: 20px;
     }
     .active {
         background-color: #3233; 
@@ -184,6 +185,9 @@
     }
     .order-btn:hover {
         background-color: #e67e22;
+        width: 260px;
+        height: 20px;
+        border-radius: 10px;
     }
 
 
@@ -300,7 +304,7 @@
     a{
         text-decoration: none;
     }
-    a:hover{
+    .social-icons a:hover{
         color: #fff;
         border-radius: 20px;
     }
