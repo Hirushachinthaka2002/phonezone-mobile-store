@@ -27,75 +27,60 @@ include_once 'header.php';
     <div class="image-details">
         <img src="./photo/hirusha.jpg" class="photo-member">
         <h4>Hirusha Chinthka</h4>
-        <p>Web Developer</p>
+        <p>Back End Developer</p>
         <div class="icon-in">
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a target="_blanck" href="https://github.com/Hirushachinthaka2002"><i class="fa-brands fa-github"></i></a>
+            <a target="_blanck" href="mailto:hirushachinthaka445@gmail.com?"><i class="fa-solid fa-envelope"></i></a>
         </div>
     </div>
     <div class="image-details">
         <img src="./photo/lakshani.jpg" class="photo-member">
         <h4>Lakshani Lasintha</h4>
-        <p>Web Developer</p>
+        <p>Front Developer</p>
         <div class="icon-in">
             <a href="#"><i class="fa-brands fa-github"></i></a>
             <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </div>
     <div class="image-details">
         <img src="./photo/warushi.jpg" class="photo-member">
         <h4>Warushi Sulakshana</h4>
-        <p>Web Developer</p>
+        <p>UI Designer</p>
         <div class="icon-in">
             <a href="#"><i class="fa-brands fa-github"></i></a>
             <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </div>
     <div class="image-details">
         <img src="./photo/promod.jpg" class="photo-member">
         <h4>Pramod Piyushan</h4>
-        <p>Web Developer</p>
+        <p>Back End Developer</p>
         <div class="icon-in">
             <a href="#"><i class="fa-brands fa-github"></i></a>
             <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </div>
     <div class="image-details">
         <img src="./photo/ishara.jpg" class="photo-member">
         <h4>Ishara Madushani</h4>
-        <p>Web Developer</p>
+        <p>Front End Developer</p>
         <div class="icon-in">
             <a href="#"><i class="fa-brands fa-github"></i></a>
             <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </div>
     <div class="image-details">
         <img src="./photo/sasikala.jpg" class="photo-member">
         <h4>Sasikala Somarathna </h4>
-        <p>Web Developer</p>
+        <p>Database Developer</p>
         <div class="icon-in">
             <a href="#"><i class="fa-brands fa-github"></i></a>
             <a href="#"><i class="fa-solid fa-envelope"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
         </div>
     </div>
     </div>
 </div>
 
-    <div class="admin-btn">
-        <?php
-            if (isset($_SESSION ['useruid'])){
-                echo  '';
-            }else{
-                echo  '<button class="ad-btn"><a href="./admin/admin_login.php">Shop Owner Login</a></button>';
-            }
-        ?>
-    </div>
 
 <?php
 include_once 'footer.php';

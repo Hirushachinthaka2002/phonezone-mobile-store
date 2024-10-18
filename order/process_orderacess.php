@@ -18,7 +18,7 @@ if (isset($_POST["submit"])) {
 
 
 
-    $emptyInput = emptyInputOrder($fullName,$country, $address, $pcode, $email, $cnum,$date);
+    $emptyInput = emptyInputOrder($fullName,$country, $address, $pcode, $email, $cnum);
     $invalidEmail = invalidEmail($email);
 
     

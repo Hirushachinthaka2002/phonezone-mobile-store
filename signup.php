@@ -1,3 +1,10 @@
+<?php
+session_start();
+    if (isset($_SESSION ['userid'])){
+        header("Location:./index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -147,7 +154,7 @@
     <div class="container">
         <div class="login-container" id="login-container">
             <h2>Register</h2>
-            <form action="includes/signup.inc.php" method="post">
+            <form action="includes/signup.inc.php" method="post" id="form-container">
                 <label for="username">Full Name</label>
                 <input type="text" id="fullname" name="fname" required>
                 <label for="username">Username</label>
@@ -179,5 +186,21 @@
 
             <p>If you already have an account  <a href= "login.php">  Click Login</a></p>
         </div>
+
+
+
+
+
     </body>
+
+            <script>
+                window.addEventListener('pageshow', function(event) {
+                    if (event.persisted || window.performance && window.performance.navigation.type === 2) {
+                        document.getElementById('form-container').reset();
+                    }
+                });
+            </script>
+
+
+
     </html>

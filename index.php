@@ -5,7 +5,7 @@
 <div class="hcontent">
     <h1 >Hello <?php 
     if (isset($_SESSION ['useruid'])){
-        echo $_SESSION ['useruid'];
+        echo $_SESSION ['userfname'];
     }else{
         echo 'New Customer';
     }
@@ -21,7 +21,8 @@
             echo '<h3>Welcome to our phone zone<br>online mobile phone store</h3><br>';
             echo '<p>Choose your favorite smartphone,<br> book your order today and pay on receipt of your phone.<br> Stocks are limited so hurry.<br>
                 If you want to order,<br> you must be logged in to our website.<br>No need if you are already logged in.</p>';
-            echo '<button class="cn"><a href="login.php">Customer Login</a></button>';  
+            echo '<button class="cn"><a href="login.php">Customer Login</a></button>';
+            echo '<button class="cn"><a href="./admin/admin_login.php">Shop Owner Login</a></button>';  
         }
     ?>
 </div>

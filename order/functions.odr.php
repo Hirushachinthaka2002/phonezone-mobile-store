@@ -2,9 +2,9 @@
     session_start();
 
 
-function emptyInputOrder($fullName, $country, $address, $pcode, $email, $cnum, $colour,$storage,$date) {
+function emptyInputOrder($fullName, $country, $address, $pcode, $email, $cnum, $colour,$storage) {
     $result=null;
-    if(empty($fullName) || empty($country) || empty($address) || empty($pcode) || empty($email) || empty($cnum)  || empty($colour) || empty($storage) || empty($date)){
+    if(empty($fullName) || empty($country) || empty($address) || empty($pcode) || empty($email) || empty($cnum)  || empty($colour) || empty($storage)){
         $result = true;
     } else {
         $result = false;
@@ -28,6 +28,7 @@ function invalidEmail($email){
 
 
 function sendOrder($conn, $fullName, $country, $address, $pcode, $email, $cnum,$phoneType,$colour,$storage,$date,$userId){
+    
     $orderstatus = 'pending';
     $sql = "INSERT INTO orders (usersName,usersCountry, usersAddress, usersPcode, usersEmail, usersCnum , brandType, brandColour, brandStorage,orderedDate,userUid,status) VALUES (?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
@@ -35,7 +36,7 @@ function sendOrder($conn, $fullName, $country, $address, $pcode, $email, $cnum,$
         header("Location:orders.php?error=stmtfailed");
         exit();
     }
-    mysqli_stmt_bind_param($stmt, "sssssissssis", $fullName, $country, $address, $pcode, $email, $cnum,$phoneType,$colour,$storage,$date,$userId,$orderstatus);
+    mysqli_stmt_bind_param($stmt, "sssssissssss", $fullName, $country, $address, $pcode, $email, $cnum,$phoneType,$colour,$storage,$date,$userId,$orderstatus);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("Location:../n_userprofile.php?error=none");

@@ -1,3 +1,10 @@
+<?php
+session_start();
+    if (isset($_SESSION ['userid'])){
+        header("Location:./index.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,7 +163,7 @@
     <div class="container">
         <div class="login-container" id="login-container">
             <h2>Login</h2>
-            <form action="includes/login.inc.php" method="post">
+            <form action="includes/login.inc.php" method="post" id="form-container">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="uid" placeholder="Username or Email" required>
                 <label for="password">Password</label>
@@ -179,4 +186,13 @@
             </div>
         </div>
     </body>
+
+            <script>
+                window.addEventListener('pageshow', function(event) {
+                    if (event.persisted || window.performance && window.performance.navigation.type === 2) {
+                        document.getElementById('form-container').reset();
+                    }
+                });
+            </script>
+
     </html>

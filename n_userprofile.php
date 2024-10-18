@@ -1,6 +1,14 @@
 <?php
 include_once 'header.php';
+
+
+session_start();
+    if (isset($_SESSION ['userid'])){
+        header("Location:./index.php");
+    }
+    
 ?>
+
 
 <div class="profile">
     <h1>Hello <?php

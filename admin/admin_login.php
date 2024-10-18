@@ -129,12 +129,12 @@
 </head>
 <body>
     <div class="home1">
-        <a href="#" class="phone"><img src="weblogo.png" alt="phone zone" class="logo1"></a>
+        <a href="../index.php" class="phone"><img src="weblogo.png" alt="phone zone" class="logo1"></a>
     
 
     <div class="container">
         <div class="login-container" id="login-container">
-            <h2>Login</h2>
+            <h2>Login<br>Only Shop Owner</h2>
             <form action="./admin_login_handle.php" method="post">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="uid" placeholder="Username or Email" required>

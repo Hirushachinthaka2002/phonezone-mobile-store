@@ -2,9 +2,9 @@
     session_start();
 
 
-function emptyInputOrder($fullName, $country, $address, $pcode, $email, $cnum,$date) {
+function emptyInputOrder($fullName, $country, $address, $pcode, $email, $cnum) {
     $result=null;
-    if(empty($fullName) || empty($country) || empty($address) || empty($pcode) || empty($email) || empty($cnum)  || empty($date)){
+    if(empty($fullName) || empty($country) || empty($address) || empty($pcode) || empty($email) || empty($cnum) ){
         $result = true;
     } else {
         $result = false;
@@ -36,7 +36,7 @@ function sendOrder($conn, $fullName, $country, $address, $pcode, $email, $cnum,$
         header("Location:orderacess.php?error=stmtfailed");
         exit();
     }
-    mysqli_stmt_bind_param($stmt, "sssssissis", $fullName, $country, $address, $pcode, $email, $cnum,$phoneType,$date,$userId,$orderstatus);
+    mysqli_stmt_bind_param($stmt, "sssssissss", $fullName, $country, $address, $pcode, $email, $cnum,$phoneType,$date,$userId,$orderstatus);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("Location:../n_userprofile.php?error=none");
